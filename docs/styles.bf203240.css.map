@@ -1,1 +1,0 @@
-{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAAA,GACC,eAAgB,CAChB,iBAAkB,CAClB,iCAAqC,CACrC,mBACD","file":"styles.bf203240.css","sourceRoot":"../src","sourcesContent":["h1 {\n\tmargin-top: 30px;\n\ttext-align: center;\n\tfont-family: \"Bebas Neue\", sans-serif;\n\tfont-weight: lighter;\n}\n"]}
