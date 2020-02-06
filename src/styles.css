@@ -22,6 +22,20 @@ body {
 	margin-top: 2%;
 }
 
+input[type='radio']:checked:after {
+    width: 12px;
+    height: 12px;
+    border-radius: 15px;
+    top: -1px;
+    left: -2px;
+    position: relative;
+    background-color: #7AAF42;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
 #dimensions svg {
 	height: 30px;
 	width: auto;
@@ -69,6 +83,7 @@ for some reason when I export the SVG smh */
   .slider::-webkit-slider-thumb {
 	-webkit-appearance: none; /* Override default look */
 	appearance: none;
+	border-radius: 50%;
 	width: 25px; /* Set a specific slider handle width */
 	height: 25px; /* Slider handle height */
 	background: #7AAF42; /* Green background */
