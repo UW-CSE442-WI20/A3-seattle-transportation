@@ -8,31 +8,29 @@ d3.csv(csvFile).then(function(data) {
         data[i].time_of_day = time
     }
 
-    // puts data into format [{key: "0:00", value 0.5}, {key : "1:00", value: 3.4, ...} ]
-    var ped_north_data = d3.nest()
+    // avg_data is formatted liket this: [{time_of_day: "0:00", 
+    //    ped_north_avg: 2.061206120612061, 
+    //    ped_south_avg: 14.298829882988299, 
+    //    bike_north_avg: 0.5306030603060305, 
+    //    bike_south_avg: 0.3177317731773177
+    //   }, ...]
+    var avg_data = d3.nest()
     .key(function(d) { return d.time_of_day; })
-    .rollup(function(v) { return d3.mean(v, function (d) { return d['Ped North']; }); })
-    .entries(data);
-    var ped_south_data = d3.nest()
-    .key(function(d) { return d.time_of_day; })
-    .rollup(function(v) { return d3.mean(v, function (d) { return d['Ped South']; }); })
-    .entries(data);
-    var bike_north_data = d3.nest()
-    .key(function(d) { return d.time_of_day; })
-    .rollup(function(v) { return d3.mean(v, function (d) { return d['Bike North']; }); })
-    .entries(data);
-    var bike_south_data = d3.nest()
-    .key(function(d) { return d.time_of_day; })
-    .rollup(function(v) { return d3.mean(v, function (d) { return d['Bike South']; }); })
-    .entries(data);
-
-// debugging logging may be useful in the future
-//    console.log("ped north:")
-//    console.log(ped_north_data);
-//    console.log("ped south");
-//    console.log(ped_south_data);
-//    console.log("bike north");
-//    console.log(bike_north_data);
-//    console.log("bike south");
-//    console.log(bike_south_data);
+    .rollup(function(v) { return { ped_north_avg: d3.mean(v, function (d) { return d['Ped North']; }), 
+                                   ped_south_avg: d3.mean(v, function (d) { return d['Ped South']; }),
+                                   bike_north_avg: d3.mean(v, function (d) { return d['Bike North']; }),
+                                   bike_south_avg: d3.mean(v, function (d) { return d['Bike South']; })
+                                }; 
+                        })
+    .entries(data)
+    .map(function(group) {
+        return {
+          time_of_day: group.key,
+          ped_north_avg: group.value.ped_north_avg,
+          ped_south_avg: group.value.ped_south_avg,
+          bike_north_avg: group.value.bike_north_avg,
+          bike_south_avg: group.value.bike_south_avg
+        }
+      });
+    console.log(avg_data[0]);
 });
