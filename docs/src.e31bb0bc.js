@@ -117,10 +117,14 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"index.js":[function(require,module,exports) {
+})({"CSV/Avg-Burke-Data.csv":[function(require,module,exports) {
+module.exports = "/Avg-Burke-Data.d9138ed8.csv";
+},{}],"index.js":[function(require,module,exports) {
 (function () {
-  // Make sure the window has loaded before we start trying to 
+  var csvFile = require("./CSV/Avg-Burke-Data.csv"); // Make sure the window has loaded before we start trying to 
   // modify the DOM.
+
+
   window.addEventListener("load", init);
 
   function init() {
@@ -153,8 +157,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   function changeTime() {
     var time = this.value;
-    d3.csv("./CSV/Avg-Burke-Data.csv").then(function (data) {
-      console.log(data);
+    d3.csv(csvFile).then(function (data) {
       d3.select("#p-north").text(data[time].ped_north_avg);
       d3.select("#p-south").text(data[time].ped_south_avg);
       d3.select("#c-north").text(data[time].bike_north_avg);
@@ -166,7 +169,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
     return document.getElementById(idName);
   }
 })();
-},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./CSV/Avg-Burke-Data.csv":"CSV/Avg-Burke-Data.csv"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -194,7 +197,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63287" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51635" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
