@@ -9,6 +9,12 @@ h1 {
 	font-size: 35pt;
 }
 
+h2 {
+	font-family: "Bebas Neue", sans-serif;
+	font-weight: lighter;
+	font-weight: 30pt;
+}
+
 body {
 	font-family: Helvetica, sans-serif;
 	background-color: rgb(248,232,205);

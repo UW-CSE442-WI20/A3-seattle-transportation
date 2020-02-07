@@ -6,13 +6,16 @@
 	window.addEventListener("load", init);
 
 	 function init() {
-	 	setupSlider();
-	 	id("myRange").addEventListener("change", changeTime);
+		setupSlider(); 
+		id("rangeSlider").addEventListener("change", changeTime);
+		id("Cyclists").addEventListener("click", displayCyclistStats);
+		id("pedestrians").addEventListener("click", displayPedestrianStats);
+		id("both").addEventListener("click", displayBothStats);
 	}
 
 	function setupSlider() {
-		var slider = document.getElementById("myRange");
-		var output = document.getElementById("demo");
+		var slider = document.getElementById("rangeSlider");
+		var output = document.getElementById("time");
 		output.innerHTML = "12:00 PM";
 		
 		slider.oninput = function() {
@@ -42,5 +45,20 @@
 
 	function id(idName) {
  		return document.getElementById(idName);
+	}
+
+	function displayCyclistStats() {
+		id("cyclistStats").style.visibility = "visible";
+		id("pedStats").style.visibility = "hidden";
+	}
+
+	function displayPedestrianStats() {
+		id("cyclistStats").style.visibility = "hidden";
+		id("pedStats").style.visibility = "visible";
+	}
+
+	function displayBothStats() {
+		id("cyclistStats").style.visibility = "visible";
+		id("pedStats").style.visibility = "visible";
 	}
 })();
