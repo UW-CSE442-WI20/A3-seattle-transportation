@@ -1,4 +1,6 @@
 (function() {
+
+	const csvFile = require("./CSV/Avg-Burke-Data.csv");
 	// Make sure the window has loaded before we start trying to 
 	// modify the DOM.
 	window.addEventListener("load", init);
@@ -30,7 +32,7 @@
 
 	function changeTime() {
 		let time = this.value;
-		d3.csv('./CSV/Avg-Burke-Data.csv').then(function(data) {
+		d3.csv(csvFile).then(function(data) {
 			d3.select("#p-north").text(data[time].ped_north_avg);
 			d3.select("#p-south").text(data[time].ped_south_avg);
 			d3.select("#c-north").text(data[time].bike_north_avg);

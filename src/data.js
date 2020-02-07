@@ -1,6 +1,6 @@
 // Code for extracting and averaging data based on 
 // N/S and cyclist/pedestrian data
-const csvFile = require('./Burke_Gilman_Bicycle_and_Pedestrian_Counter.csv');
+const csvFile = require('./CSV/Burke_Gilman_Bicycle_and_Pedestrian_Counter.csv');
 d3.csv(csvFile).then(function(data) {
     for (i = 0; i < data.length; i++) {
         // extract the time of day from the date
