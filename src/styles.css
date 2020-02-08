@@ -137,6 +137,7 @@ for some reason when I export the SVG smh */
 .icon-container svg {
 	height: 30px;
 	width: auto;
+	position: absolute;
 }
 
 .hidden {
