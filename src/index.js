@@ -105,16 +105,22 @@
 	function displayCyclistStats() {
 		id("bike-stats").style.visibility = "visible";
 		id("ped-stats").style.visibility = "hidden";
+		id("insert-ped-north-here").style.visibility = "hidden";
+		id("insert-bike-north-here").style.visibility = "visible";
 	}
 
 	function displayPedestrianStats() {
 		id("bike-stats").style.visibility = "hidden";
 		id("ped-stats").style.visibility = "visible";
+		id("insert-ped-north-here").style.visibility = "visible";
+		id("insert-bike-north-here").style.visibility = "hidden";
 	}
 
 	function displayBothStats() {
 		id("bike-stats").style.visibility = "visible";
 		id("ped-stats").style.visibility = "visible";
+		id("insert-ped-north-here").style.visibility = "visible";
+		id("insert-bike-north-here").style.visibility = "visible";
 	}
 
 	function id(idName) {
