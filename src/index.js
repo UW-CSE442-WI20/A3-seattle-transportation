@@ -3,6 +3,8 @@
 	const csvFile = require("./CSV/Avg-Burke-Data.csv");
 	const ped = require("./SVG/ped.svg");
 	const bike = require("./SVG/bike.svg");
+	const pedReverse = require("./SVG/ped-reverse.svg");
+	const bikeReverse = require("./SVG/bike-reverse.svg");
 	// Keep track of the selected time so that if the user clicks to a new
 	// time, we don't continue populating the icons from the old time
 	// in createIcons!
@@ -18,7 +20,6 @@
 		id("cyclists").addEventListener("click", displayCyclistStats);
 		id("pedestrians").addEventListener("click", displayPedestrianStats);
 		id("both").addEventListener("click", displayBothStats);
-		id("stop").addEventListener("click", removeAllIcons);
 	}
 
 	function setupSlider() {
@@ -51,15 +52,18 @@
 		currentTime = this.value;
 		d3.csv(csvFile).then(function(data) {
 			d3.select("#p-north").text(data[currentTime].ped_north_avg);
-			createIcons(data[currentTime].ped_north_avg, "#insert-ped-north-here", ped, currentTime);
+			createIcons(data[currentTime].ped_north_avg, "#insert-ped-north-here", ped, currentTime, "translate(1180,0)");
 			d3.select("#b-north").text(data[currentTime].bike_north_avg);
-			createIcons(data[currentTime].bike_north_avg, "#insert-bike-north-here", bike, currentTime);
+			createIcons(data[currentTime].bike_north_avg, "#insert-bike-north-here", bike, currentTime, "translate(1180,0)");
+			
 			d3.select("#p-south").text(data[currentTime].ped_south_avg);
+			createIcons(data[currentTime].ped_south_avg, "#insert-ped-south-here", pedReverse, currentTime, "translate(-1180,0)");
 			d3.select("#b-south").text(data[currentTime].bike_south_avg);
+			createIcons(data[currentTime].bike_south_avg, "#insert-bike-south-here", bikeReverse, currentTime, "translate(-1180,0)");
 		});		
 	}
 
-	function createIcons(numIcons, insertDiv, typeOfIcon, time) {
+	function createIcons(numIcons, insertDiv, typeOfIcon, time, translation) {
 		// Create the first one before the interval so that the user isn't
 		// staring at a blank page
 		d3.xml(typeOfIcon)
@@ -67,7 +71,7 @@
 			  	d3.select(insertDiv)
 			    	.node()
 			    	.append(data.documentElement);
-			    startTransition(0, insertDiv);
+			    startTransition(0, insertDiv, translation);
 			})
 		
 		let x = 0;
@@ -82,7 +86,7 @@
 		  				d3.select(insertDiv)
 		    				.node()
 		    				.append(data.documentElement)
-		    			startTransition(x, insertDiv);
+		    			startTransition(x, insertDiv, translation);
 				  	})
 			} else {
 				return;
@@ -91,13 +95,13 @@
 		}, 1000);
 	}
 
-	function startTransition(num, insertDiv) {
+	function startTransition(num, insertDiv, translation) {
 		d3.selectAll(insertDiv + " svg")
 			.filter(function(d, i) {
 			    return i >= num;
 			 })
 			.transition()
-			.attr("transform", "translate(1180,0)")
+			.attr("transform", translation)
 			.duration(5000)
 			.ease(d3.easeLinear); 
 	}

@@ -143,3 +143,8 @@ for some reason when I export the SVG smh */
 .hidden {
 	visibility: none;
 }
+
+#insert-bike-south-here, #insert-ped-south-here {
+	display: flex;
+	flex-direction: row-reverse;
+}
