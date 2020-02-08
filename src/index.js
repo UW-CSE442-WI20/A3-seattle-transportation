@@ -111,6 +111,8 @@
 		id("ped-stats").style.visibility = "hidden";
 		id("insert-ped-north-here").style.visibility = "hidden";
 		id("insert-bike-north-here").style.visibility = "visible";
+		id("insert-ped-south-here").style.visibility = "hidden";
+		id("insert-bike-south-here").style.visibility = "visible";
 	}
 
 	function displayPedestrianStats() {
@@ -118,6 +120,8 @@
 		id("ped-stats").style.visibility = "visible";
 		id("insert-ped-north-here").style.visibility = "visible";
 		id("insert-bike-north-here").style.visibility = "hidden";
+		id("insert-ped-south-here").style.visibility = "visible";
+		id("insert-bike-south-here").style.visibility = "hidden";
 	}
 
 	function displayBothStats() {
@@ -125,6 +129,8 @@
 		id("ped-stats").style.visibility = "visible";
 		id("insert-ped-north-here").style.visibility = "visible";
 		id("insert-bike-north-here").style.visibility = "visible";
+		id("insert-ped-south-here").style.visibility = "visible";
+		id("insert-bike-south-here").style.visibility = "visible";
 	}
 
 	function id(idName) {
