@@ -130,11 +130,11 @@ for some reason when I export the SVG smh */
 	cursor: pointer; /* Cursor on hover */
 }
 
-#insert-here {
+.icon-container {
 	height: 30px;
 }
 
-#insert-here svg {
+.icon-container svg {
 	height: 30px;
 	width: auto;
 }

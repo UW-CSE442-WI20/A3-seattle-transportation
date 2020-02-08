@@ -2,6 +2,12 @@
 
 	const csvFile = require("./CSV/Avg-Burke-Data.csv");
 	const ped = require("./SVG/ped.svg");
+	const bike = require("./SVG/bike.svg");
+	// Keep track of the selected time so that if the user clicks to a new
+	// time, we don't continue populating the icons from the old time
+	// in createIcons!
+	let currentTime = 0;
+
 	// Make sure the window has loaded before we start trying to 
 	// modify the DOM.
 	window.addEventListener("load", init);
@@ -12,6 +18,7 @@
 		id("cyclists").addEventListener("click", displayCyclistStats);
 		id("pedestrians").addEventListener("click", displayPedestrianStats);
 		id("both").addEventListener("click", displayBothStats);
+		id("stop").addEventListener("click", removeAllIcons);
 	}
 
 	function setupSlider() {
@@ -36,49 +43,56 @@
 
 	function changeTime() {
 		// Clear out all the old ped/bike
-		id("insert-here").innerHTML = "";
-		let time = this.value;
+		//id("all-moving-icons").style.visibility = "visible";
+		let containers = qsa(".icon-container")
+		for (let i = 0; i < containers.length; i++) {
+		    containers[i].innerHTML = "";
+		}
+		currentTime = this.value;
 		d3.csv(csvFile).then(function(data) {
-			d3.select("#p-north").text(data[time].ped_north_avg);
-			createIcons(data[time].ped_north_avg);
-			d3.select("#p-south").text(data[time].ped_south_avg);
-			d3.select("#c-north").text(data[time].bike_north_avg);
-			d3.select("#c-south").text(data[time].bike_south_avg);
+			d3.select("#p-north").text(data[currentTime].ped_north_avg);
+			createIcons(data[currentTime].ped_north_avg, "#insert-ped-north-here", ped, currentTime);
+			d3.select("#b-north").text(data[currentTime].bike_north_avg);
+			createIcons(data[currentTime].bike_north_avg, "#insert-bike-north-here", bike, currentTime);
+			d3.select("#p-south").text(data[currentTime].ped_south_avg);
+			d3.select("#b-south").text(data[currentTime].bike_south_avg);
 		});		
 	}
 
-	function createIcons(numIcons) {
+	function createIcons(numIcons, insertDiv, typeOfIcon, time) {
 		// Create the first one before the interval so that the user isn't
 		// staring at a blank page
-		d3.xml(ped)
+		d3.xml(typeOfIcon)
 			.then(data => {
-			  	d3.select("#insert-here")
+			  	d3.select(insertDiv)
 			    	.node()
 			    	.append(data.documentElement);
-			    startTransition(0);
+			    startTransition(0, insertDiv);
 			})
 		
 		let x = 0;
 		// Keep making icons until we've reached the necessary amount,
 		// staggering by 5 seconds
 		setInterval(function() {
-			if (x < numIcons - 1) {
-		        d3.xml(ped)
+			// If the user has changed the time on us, we should 
+			// stop creating new icons.
+			if (x < numIcons - 1 && currentTime == time) {
+		        d3.xml(typeOfIcon)
 					.then(data => {
-		  				d3.select("#insert-here")
+		  				d3.select(insertDiv)
 		    				.node()
 		    				.append(data.documentElement)
-		    			startTransition(x);
+		    			startTransition(x, insertDiv);
 				  	})
 			} else {
 				return;
 			}
 		    x++;
-		}, 2000);
+		}, 1000);
 	}
 
-	function startTransition(num) {
-		d3.selectAll("#insert-here svg")
+	function startTransition(num, insertDiv) {
+		d3.selectAll(insertDiv + " svg")
 			.filter(function(d, i) {
 			    return i >= num;
 			 })
@@ -88,22 +102,26 @@
 			.ease(d3.easeLinear); 
 	}
 
-	function id(idName) {
- 		return document.getElementById(idName);
-	}
-
 	function displayCyclistStats() {
-		id("cyclist-stats").style.visibility = "visible";
+		id("bike-stats").style.visibility = "visible";
 		id("ped-stats").style.visibility = "hidden";
 	}
 
 	function displayPedestrianStats() {
-		id("cyclist-stats").style.visibility = "hidden";
+		id("bike-stats").style.visibility = "hidden";
 		id("ped-stats").style.visibility = "visible";
 	}
 
 	function displayBothStats() {
-		id("cyclist-stats").style.visibility = "visible";
+		id("bike-stats").style.visibility = "visible";
 		id("ped-stats").style.visibility = "visible";
+	}
+
+	function id(idName) {
+ 		return document.getElementById(idName);
+	}
+
+	function qsa(query) {
+		return document.querySelectorAll(query);
 	}
 })();
