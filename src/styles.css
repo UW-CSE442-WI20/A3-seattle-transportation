@@ -81,7 +81,7 @@ for some reason when I export the SVG smh */
 	fill: #C4C2C2;
 }
 
-.slidecontainer {
+.slide-container {
 	width: 100%; /* Width of the outside container */
 	text-align: center;
 	padding-top: 20px;
@@ -128,4 +128,13 @@ for some reason when I export the SVG smh */
 	border-radius: 50%;
 	background: #7AAF42; /* Green background */
 	cursor: pointer; /* Cursor on hover */
+}
+
+#insert-here {
+	height: 30px;
+}
+
+#insert-here svg {
+	height: 30px;
+	width: auto;
 }
