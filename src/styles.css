@@ -138,3 +138,7 @@ for some reason when I export the SVG smh */
 	height: 30px;
 	width: auto;
 }
+
+.hidden {
+	visibility: none;
+}

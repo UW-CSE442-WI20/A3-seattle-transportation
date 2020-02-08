@@ -55,7 +55,7 @@
 			  	d3.select("#insert-here")
 			    	.node()
 			    	.append(data.documentElement);
-			    startTransition();
+			    startTransition(0);
 			})
 		
 		let x = 0;
@@ -68,22 +68,24 @@
 		  				d3.select("#insert-here")
 		    				.node()
 		    				.append(data.documentElement)
-		    			startTransition();
-				  })
+		    			startTransition(x);
+				  	})
 			} else {
 				return;
 			}
 		    x++;
-		}, 3000);
+		}, 2000);
 	}
 
-	function startTransition() {
+	function startTransition(num) {
 		d3.selectAll("#insert-here svg")
-			.transition("movement")
-			.attr("transform", "translate(1080,0)")
-			.duration(10000)
-			.ease(d3.easeLinear)
-			.remove();
+			.filter(function(d, i) {
+			    return i >= num;
+			 })
+			.transition()
+			.attr("transform", "translate(1180,0)")
+			.duration(5000)
+			.ease(d3.easeLinear); 
 	}
 
 	function id(idName) {
