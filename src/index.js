@@ -9,6 +9,8 @@
 	// time, we don't continue populating the icons from the old time
 	// in createIcons!
 	let currentTime = 0;
+	let csv = d3.csv(csvFile);
+	let intervalId;
 
 	// Make sure the window has loaded before we start trying to 
 	// modify the DOM.
@@ -20,6 +22,15 @@
 		id("cyclists").addEventListener("click", displayCyclistStats);
 		id("pedestrians").addEventListener("click", displayPedestrianStats);
 		id("both").addEventListener("click", displayBothStats);
+		let resizeId;
+		window.addEventListener('resize', function() {
+		    clearTimeout(resizeId);
+		    resizeId = setTimeout(function() {
+		    	// Stop the old transitions
+		    	clearInterval(intervalId);
+		    	changeTime();
+		    }, 500);
+		});
 	}
 
 	function setupSlider() {
@@ -49,17 +60,18 @@
 		for (let i = 0; i < containers.length; i++) {
 		    containers[i].innerHTML = "";
 		}
-		currentTime = this.value;
-		d3.csv(csvFile).then(function(data) {
+		currentTime = this.value != null ? this.value : currentTime;
+		let width = window.outerWidth - window.outerWidth / 5;
+		csv.then(function(data) {
 			d3.select("#p-north").text(data[currentTime].ped_north_avg);
-			createIcons(data[currentTime].ped_north_avg, "#insert-ped-north-here", ped, currentTime, "translate(950,0)", "translate(1015, 0)");
+			createIcons(data[currentTime].ped_north_avg, "#insert-ped-north-here", ped, currentTime, `translate(${width},0)`, `translate(${width + 20},0)`);
 			d3.select("#b-north").text(data[currentTime].bike_north_avg);
-			createIcons(data[currentTime].bike_north_avg, "#insert-bike-north-here", bike, currentTime, "translate(950,0)", "translate(1015, 0)");
+			createIcons(data[currentTime].bike_north_avg, "#insert-bike-north-here", bike, currentTime, `translate(${width},0)`, `translate(${width + 20},0)`);
 			
 			d3.select("#p-south").text(data[currentTime].ped_south_avg);
-			createIcons(data[currentTime].ped_south_avg, "#insert-ped-south-here", pedReverse, currentTime, "translate(-950,0)", "translate(-1015, 0)");
+			createIcons(data[currentTime].ped_south_avg, "#insert-ped-south-here", pedReverse, currentTime, `translate(-${width},0)`, `translate(${-width - 20},0)`);
 			d3.select("#b-south").text(data[currentTime].bike_south_avg);
-			createIcons(data[currentTime].bike_south_avg, "#insert-bike-south-here", bikeReverse, currentTime, "translate(-950,0)", "translate(-1015, 0)");
+			createIcons(data[currentTime].bike_south_avg, "#insert-bike-south-here", bikeReverse, currentTime, `translate(-${width},0)`, `translate(${-width - 20},0)`);
 		});		
 	}
 
@@ -106,7 +118,12 @@
 			.duration(5000)
             .ease(d3.easeLinear)
             .on('end', function () { 
-                d3.select(this).transition().attr("transform", endTranslation).ease(d3.easeLinear).style('opacity', 0).duration(370)
+                d3.select(this)
+                .transition()
+                .attr("transform", endTranslation)
+                .ease(d3.easeLinear)
+                .style('opacity', 0)
+                .duration(370)
             });
 	}
 
