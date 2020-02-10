@@ -96,6 +96,9 @@
 			    	.append(data.documentElement);
                 startTransition(0, insertDiv, translation, endTranslation);
 			})
+		setTimeout(function() {
+			updateCounts(typeOfIcon);
+		}, 5000);
 		
         let x = 0;
         
@@ -110,8 +113,8 @@
                           d3.select(insertDiv)
 		    				.node()
                             .append(data.documentElement)
-                        startTransition(x, insertDiv, translation, endTranslation);
-                      })
+                        startTransition(x, insertDiv, translation, endTranslation, typeOfIcon);
+					  })
 			} else {
 				return;
 			}
@@ -119,7 +122,7 @@
 		}, 1000);
 	}
 
-	function startTransition(num, insertDiv, translation, endTranslation) {
+	function startTransition(num, insertDiv, translation, endTranslation, typeOfIcon) {
         d3.selectAll(insertDiv + " svg")
 			.filter(function(d, i) {
 			    return i >= num;
@@ -129,6 +132,7 @@
 			.duration(5000)
             .ease(d3.easeLinear)
             .on('end', function () { 
+				updateCounts(typeOfIcon);
                 d3.select(this)
                 .transition()
                 .attr("transform", endTranslation)
@@ -136,6 +140,18 @@
                 .style('opacity', 0)
                 .duration(370)
             });
+	}
+
+	function updateCounts(typeOfIcon) {
+		if (typeOfIcon == ped) {
+			id('north-ped-count').textContent = parseInt(id('north-ped-count').textContent) + 1;
+		} else if(typeOfIcon == bike) {
+			id('north-bike-count').textContent = parseInt(id('north-bike-count').textContent) + 1;
+		} else if(typeOfIcon == pedReverse) {
+			id('south-ped-count').textContent = parseInt(id('south-ped-count').textContent) + 1;
+		} else if (typeOfIcon == bikeReverse) {
+			id('south-bike-count').textContent = parseInt(id('south-bike-count').textContent) + 1;
+		}
 	}
 
 	function displayCyclistStats() {
