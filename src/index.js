@@ -52,29 +52,30 @@
 		currentTime = this.value;
 		d3.csv(csvFile).then(function(data) {
 			d3.select("#p-north").text(data[currentTime].ped_north_avg);
-			createIcons(data[currentTime].ped_north_avg, "#insert-ped-north-here", ped, currentTime, "translate(1150,0)");
+			createIcons(data[currentTime].ped_north_avg, "#insert-ped-north-here", ped, currentTime, "translate(1010,0)");
 			d3.select("#b-north").text(data[currentTime].bike_north_avg);
-			createIcons(data[currentTime].bike_north_avg, "#insert-bike-north-here", bike, currentTime, "translate(1150,0)");
+			createIcons(data[currentTime].bike_north_avg, "#insert-bike-north-here", bike, currentTime, "translate(1010,0)");
 			
 			d3.select("#p-south").text(data[currentTime].ped_south_avg);
-			createIcons(data[currentTime].ped_south_avg, "#insert-ped-south-here", pedReverse, currentTime, "translate(-1150,0)");
+			createIcons(data[currentTime].ped_south_avg, "#insert-ped-south-here", pedReverse, currentTime, "translate(-1010,0)");
 			d3.select("#b-south").text(data[currentTime].bike_south_avg);
-			createIcons(data[currentTime].bike_south_avg, "#insert-bike-south-here", bikeReverse, currentTime, "translate(-1150,0)");
+			createIcons(data[currentTime].bike_south_avg, "#insert-bike-south-here", bikeReverse, currentTime, "translate(-1010,0)");
 		});		
 	}
 
 	function createIcons(numIcons, insertDiv, typeOfIcon, time, translation) {
 		// Create the first one before the interval so that the user isn't
-		// staring at a blank page
+        // staring at a blank page
 		d3.xml(typeOfIcon)
 			.then(data => {
 			  	d3.select(insertDiv)
 			    	.node()
 			    	.append(data.documentElement);
-			    startTransition(0, insertDiv, translation);
+                startTransition(0, insertDiv, translation);
 			})
 		
-		let x = 0;
+        let x = 0;
+        
 		// Keep making icons until we've reached the necessary amount,
 		// staggering by 5 seconds
 		setInterval(function() {
@@ -83,11 +84,11 @@
 			if (x < numIcons - 1 && currentTime == time) {
 		        d3.xml(typeOfIcon)
 					.then(data => {
-		  				d3.select(insertDiv)
+                          d3.select(insertDiv)
 		    				.node()
-		    				.append(data.documentElement)
-		    			startTransition(x, insertDiv, translation);
-				  	})
+                            .append(data.documentElement)
+                        startTransition(x, insertDiv, translation);
+                      })
 			} else {
 				return;
 			}
@@ -96,14 +97,17 @@
 	}
 
 	function startTransition(num, insertDiv, translation) {
-		d3.selectAll(insertDiv + " svg")
+        d3.selectAll(insertDiv + " svg")
 			.filter(function(d, i) {
 			    return i >= num;
 			 })
-			.transition()
+            .transition()
 			.attr("transform", translation)
 			.duration(5000)
-			.ease(d3.easeLinear); 
+            .ease(d3.easeLinear)
+            .on('end', function () { 
+                d3.select(this).style('opacity', 0);
+            });
 	}
 
 	function displayCyclistStats() {
