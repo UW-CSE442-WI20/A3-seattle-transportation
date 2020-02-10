@@ -149,12 +149,11 @@ for some reason when I export the SVG smh */
 	flex-direction: row-reverse;
 }
 
+#compass {
+	padding-right: 122px;
+	float: right;
+}
 #north-arrow {
 	height: 30px;
 	width: auto;
-	/* position: absolte; */
-	/* padding-left: 920px; */
-	/* padding-top: 40px; */
-	padding-right: 122px;
-	float: right;
 }
