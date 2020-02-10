@@ -148,3 +148,13 @@ for some reason when I export the SVG smh */
 	display: flex;
 	flex-direction: row-reverse;
 }
+
+#north-arrow {
+	height: 30px;
+	width: auto;
+	/* position: absolte; */
+	/* padding-left: 920px; */
+	/* padding-top: 40px; */
+	padding-right: 122px;
+	float: right;
+}
