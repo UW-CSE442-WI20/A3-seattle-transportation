@@ -17,6 +17,7 @@
 	window.addEventListener("load", init);
 
 	 function init() {
+		sizeElements();
 		setupSlider(); 
 		id("slider").addEventListener("change", changeTime);
 		id("cyclists").addEventListener("click", displayCyclistStats);
@@ -27,12 +28,20 @@
 		    clearTimeout(resizeId);
 		    resizeId = setTimeout(function() {
 		    	// Stop the old transitions
-		    	id("slide-container").style.marginTop = id("trail").clientHeight / 1.8 + "px";
+		    	sizeElements();
 		    	clearInterval(intervalId);
 		    	changeTime();
 		    }, 500);
 		});
 		id()
+	}
+
+	function sizeElements() {
+		id("slide-container").style.marginTop = id("trail").clientHeight / 1.8 + "px";
+		let containers = qsa(".icon-container");
+		for (let i = 0; i < containers.length; i++) {
+		    containers[i].style.marginBottom = id("trail").clientHeight / 22 + "px";
+		}
 	}
 
 	function setupSlider() {
@@ -53,7 +62,6 @@
 			}
 			output.innerHTML = time;
 		}
-		console.log(id("trail").clientHeight);
 		id("slide-container").style.marginTop = id("trail").clientHeight / 1.8 + "px";
 	}
 
@@ -116,7 +124,7 @@
         d3.selectAll(insertDiv + " svg")
 			.filter(function(d, i) {
 			    return i >= num;
-			 })
+			})
             .transition()
 			.attr("transform", translation)
 			.duration(5000)

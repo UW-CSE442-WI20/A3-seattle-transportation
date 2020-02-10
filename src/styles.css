@@ -131,7 +131,6 @@ for some reason when I export the SVG smh */
 
 .icon-container {
 	height: 30px;
-	margin-bottom: 0.8%;
 }
 
 .icon-container svg {
@@ -146,7 +145,7 @@ for some reason when I export the SVG smh */
 }
 
 #all-moving-icons {
-	margin: -12.4%;
+	margin: -12.3%;
 }
 
 
