@@ -52,18 +52,18 @@
 		currentTime = this.value;
 		d3.csv(csvFile).then(function(data) {
 			d3.select("#p-north").text(data[currentTime].ped_north_avg);
-			createIcons(data[currentTime].ped_north_avg, "#insert-ped-north-here", ped, currentTime, "translate(1010,0)");
+			createIcons(data[currentTime].ped_north_avg, "#insert-ped-north-here", ped, currentTime, "translate(1000,0)", "translate(1020, 0)");
 			d3.select("#b-north").text(data[currentTime].bike_north_avg);
-			createIcons(data[currentTime].bike_north_avg, "#insert-bike-north-here", bike, currentTime, "translate(1010,0)");
+			createIcons(data[currentTime].bike_north_avg, "#insert-bike-north-here", bike, currentTime, "translate(1000,0)", "translate(1020, 0)");
 			
 			d3.select("#p-south").text(data[currentTime].ped_south_avg);
-			createIcons(data[currentTime].ped_south_avg, "#insert-ped-south-here", pedReverse, currentTime, "translate(-1010,0)");
+			createIcons(data[currentTime].ped_south_avg, "#insert-ped-south-here", pedReverse, currentTime, "translate(-1000,0)", "translate(-1020, 0)");
 			d3.select("#b-south").text(data[currentTime].bike_south_avg);
-			createIcons(data[currentTime].bike_south_avg, "#insert-bike-south-here", bikeReverse, currentTime, "translate(-1010,0)");
+			createIcons(data[currentTime].bike_south_avg, "#insert-bike-south-here", bikeReverse, currentTime, "translate(-1000,0)", "translate(-1020, 0)");
 		});		
 	}
 
-	function createIcons(numIcons, insertDiv, typeOfIcon, time, translation) {
+	function createIcons(numIcons, insertDiv, typeOfIcon, time, translation, endTranslation) {
 		// Create the first one before the interval so that the user isn't
         // staring at a blank page
 		d3.xml(typeOfIcon)
@@ -71,7 +71,7 @@
 			  	d3.select(insertDiv)
 			    	.node()
 			    	.append(data.documentElement);
-                startTransition(0, insertDiv, translation);
+                startTransition(0, insertDiv, translation, endTranslation);
 			})
 		
         let x = 0;
@@ -87,7 +87,7 @@
                           d3.select(insertDiv)
 		    				.node()
                             .append(data.documentElement)
-                        startTransition(x, insertDiv, translation);
+                        startTransition(x, insertDiv, translation, endTranslation);
                       })
 			} else {
 				return;
@@ -96,7 +96,7 @@
 		}, 1000);
 	}
 
-	function startTransition(num, insertDiv, translation) {
+	function startTransition(num, insertDiv, translation, endTranslation) {
         d3.selectAll(insertDiv + " svg")
 			.filter(function(d, i) {
 			    return i >= num;
@@ -106,7 +106,7 @@
 			.duration(5000)
             .ease(d3.easeLinear)
             .on('end', function () { 
-                d3.select(this).style('opacity', 0);
+                d3.select(this).transition().attr("transform", endTranslation).ease(d3.easeLinear).style('opacity', 0).duration(200)
             });
 	}
 
