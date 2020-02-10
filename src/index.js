@@ -52,14 +52,14 @@
 		currentTime = this.value;
 		d3.csv(csvFile).then(function(data) {
 			d3.select("#p-north").text(data[currentTime].ped_north_avg);
-			createIcons(data[currentTime].ped_north_avg, "#insert-ped-north-here", ped, currentTime, "translate(1180,0)");
+			createIcons(data[currentTime].ped_north_avg, "#insert-ped-north-here", ped, currentTime, "translate(1380,0)");
 			d3.select("#b-north").text(data[currentTime].bike_north_avg);
-			createIcons(data[currentTime].bike_north_avg, "#insert-bike-north-here", bike, currentTime, "translate(1180,0)");
+			createIcons(data[currentTime].bike_north_avg, "#insert-bike-north-here", bike, currentTime, "translate(1380,0)");
 			
 			d3.select("#p-south").text(data[currentTime].ped_south_avg);
-			createIcons(data[currentTime].ped_south_avg, "#insert-ped-south-here", pedReverse, currentTime, "translate(-1180,0)");
+			createIcons(data[currentTime].ped_south_avg, "#insert-ped-south-here", pedReverse, currentTime, "translate(-1380,0)");
 			d3.select("#b-south").text(data[currentTime].bike_south_avg);
-			createIcons(data[currentTime].bike_south_avg, "#insert-bike-south-here", bikeReverse, currentTime, "translate(-1180,0)");
+			createIcons(data[currentTime].bike_south_avg, "#insert-bike-south-here", bikeReverse, currentTime, "translate(-1380,0)");
 		});		
 	}
 

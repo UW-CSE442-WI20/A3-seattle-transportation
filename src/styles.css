@@ -85,6 +85,7 @@ for some reason when I export the SVG smh */
 	width: 100%; /* Width of the outside container */
 	text-align: center;
 	padding-top: 20px;
+	margin-top: 150px;
 }
   
 /* The slider itself */
@@ -132,10 +133,11 @@ for some reason when I export the SVG smh */
 
 .icon-container {
 	height: 30px;
+	margin-bottom: 8.5px;
 }
 
 .icon-container svg {
-	height: 30px;
+	height: 25px;
 	width: auto;
 	position: absolute;
 }
@@ -143,6 +145,11 @@ for some reason when I export the SVG smh */
 .hidden {
 	visibility: none;
 }
+
+#all-moving-icons {
+	margin: -150px;
+}
+
 
 #insert-bike-south-here, #insert-ped-south-here {
 	display: flex;
@@ -153,6 +160,7 @@ for some reason when I export the SVG smh */
 	padding-right: 122px;
 	float: right;
 }
+
 #north-arrow {
 	height: 30px;
 	width: auto;
