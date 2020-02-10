@@ -21,9 +21,15 @@
 		sizeElements();
 		setupSlider(); 
 		id("slider").addEventListener("change", changeTime);
-		id("cyclists").addEventListener("click", displayCyclistStats);
-		id("pedestrians").addEventListener("click", displayPedestrianStats);
-		id("both").addEventListener("click", displayBothStats);
+		id("cyclists").addEventListener("click", function() {
+			displayStats("visible", "hidden");
+		});
+		id("pedestrians").addEventListener("click", function() {
+			displayStats("hidden", "visible");
+		});
+		id("both").addEventListener("click", function() {
+			displayStats("visible", "visible");
+		});
 		let resizeId;
 		window.addEventListener('resize', function() {
 		    clearTimeout(resizeId);
@@ -161,55 +167,15 @@
 		}
 	}
 
-	function displayCyclistStats() {
-		id("bike-stats").style.visibility = "visible";
-		id("ped-stats").style.visibility = "hidden";
-		id("insert-ped-north-here").style.visibility = "hidden";
-		id("insert-bike-north-here").style.visibility = "visible";
-		id("insert-ped-south-here").style.visibility = "hidden";
-		id("insert-bike-south-here").style.visibility = "visible";
-		id('north-ped-count').style.visibility = "hidden";
-		id('north-bike-count').style.visibility = "visible";
-		id('south-ped-count').style.visibility = "hidden";
-		id('south-bike-count').style.visibility = "visible";
-		id('north-bikes').style.visibility = "visible";
-		id('south-bikes').style.visibility = "visible";
-		id('north-peds').style.visibility = "hidden";
-		id('south-peds').style.visibility = "hidden";
-	}
-
-	function displayPedestrianStats() {
-		id("bike-stats").style.visibility = "hidden";
-		id("ped-stats").style.visibility = "visible";
-		id("insert-ped-north-here").style.visibility = "visible";
-		id("insert-bike-north-here").style.visibility = "hidden";
-		id("insert-ped-south-here").style.visibility = "visible";
-		id("insert-bike-south-here").style.visibility = "hidden";
-		id('north-ped-count').style.visibility = "visible";
-		id('north-bike-count').style.visibility = "hidden";
-		id('south-ped-count').style.visibility = "visible";
-		id('south-bike-count').style.visibility = "hidden";
-		id('north-bikes').style.visibility = "hidden";
-		id('south-bikes').style.visibility = "hidden";
-		id('north-peds').style.visibility = "visible";
-		id('south-peds').style.visibility = "visible";
-	}
-
-	function displayBothStats() {
-		id("bike-stats").style.visibility = "visible";
-		id("ped-stats").style.visibility = "visible";
-		id("insert-ped-north-here").style.visibility = "visible";
-		id("insert-bike-north-here").style.visibility = "visible";
-		id("insert-ped-south-here").style.visibility = "visible";
-		id("insert-bike-south-here").style.visibility = "visible";
-		id('north-ped-count').style.visibility = "visible";
-		id('north-bike-count').style.visibility = "visible";
-		id('south-ped-count').style.visibility = "visible";
-		id('south-bike-count').style.visibility = "visible";
-		id('north-bikes').style.visibility = "visible";
-		id('south-bikes').style.visibility = "visible";
-		id('north-peds').style.visibility = "visible";
-		id('south-peds').style.visibility = "visible";
+	function displayStats(bikeVisibility, pedestrianVisibility) {
+		let bikes = qsa('.bike');
+		for (let i = 0; i < bikes.length; i++) {
+			bikes[i].style.visibility = bikeVisibility;
+		}
+		let peds = qsa('.ped');
+		for (let i = 0; i < peds.length; i++) {
+			peds[i].style.visibility = pedestrianVisibility;
+		}
 	}
 
 	function id(idName) {
