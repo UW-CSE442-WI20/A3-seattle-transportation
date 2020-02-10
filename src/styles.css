@@ -76,6 +76,10 @@ for some reason when I export the SVG smh */
 	fill: #C4C2C2;
 }
 
+#trail text {
+	font-size: 20px;
+}
+
 #trail .end {
 	fill: #7AAF42;
 	stroke: none;

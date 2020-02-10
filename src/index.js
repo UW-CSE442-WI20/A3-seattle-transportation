@@ -11,6 +11,7 @@
 	let currentTime = 0;
 	let csv = d3.csv(csvFile);
 	let intervalId;
+	let timeoutId;
 
 	// Make sure the window has loaded before we start trying to 
 	// modify the DOM.
@@ -65,12 +66,18 @@
 	}
 
 	function changeTime() {
-		// Clear out all the old ped/bike
-		//id("all-moving-icons").style.visibility = "visible";
+		// Clear out all the old ped/bike content
+		clearTimeout(timeoutId);
+		id('north-ped-count').textContent = 0;
+		id('north-bike-count').textContent = 0;
+		id('south-ped-count').textContent = 0;
+		id('south-bike-count').textContent = 0;
 		let containers = qsa(".icon-container")
 		for (let i = 0; i < containers.length; i++) {
 		    containers[i].innerHTML = "";
 		}
+		
+		// Populate the new ped/bike content
 		currentTime = this.value != null ? this.value : currentTime;
 		let width = window.outerWidth - window.outerWidth / 5;
 		csv.then(function(data) {
@@ -96,14 +103,14 @@
 			    	.append(data.documentElement);
                 startTransition(0, insertDiv, translation, endTranslation);
 			})
-		setTimeout(function() {
+		timeoutId = setTimeout(function() {
 			updateCounts(typeOfIcon);
 		}, 5000);
 		
         let x = 0;
         
 		// Keep making icons until we've reached the necessary amount,
-		// staggering by 5 seconds
+		// staggering by 1 seconds
 		intervalId = setInterval(function() {
 			// If the user has changed the time on us, we should 
 			// stop creating new icons.
@@ -132,7 +139,7 @@
 			.duration(5000)
             .ease(d3.easeLinear)
             .on('end', function () { 
-				updateCounts(typeOfIcon);
+            	updateCounts(typeOfIcon);
                 d3.select(this)
                 .transition()
                 .attr("transform", endTranslation)
@@ -161,6 +168,14 @@
 		id("insert-bike-north-here").style.visibility = "visible";
 		id("insert-ped-south-here").style.visibility = "hidden";
 		id("insert-bike-south-here").style.visibility = "visible";
+		id('north-ped-count').style.visibility = "hidden";
+		id('north-bike-count').style.visibility = "visible";
+		id('south-ped-count').style.visibility = "hidden";
+		id('south-bike-count').style.visibility = "visible";
+		id('north-bikes').style.visibility = "visible";
+		id('south-bikes').style.visibility = "visible";
+		id('north-peds').style.visibility = "hidden";
+		id('south-peds').style.visibility = "hidden";
 	}
 
 	function displayPedestrianStats() {
@@ -170,6 +185,14 @@
 		id("insert-bike-north-here").style.visibility = "hidden";
 		id("insert-ped-south-here").style.visibility = "visible";
 		id("insert-bike-south-here").style.visibility = "hidden";
+		id('north-ped-count').style.visibility = "visible";
+		id('north-bike-count').style.visibility = "hidden";
+		id('south-ped-count').style.visibility = "visible";
+		id('south-bike-count').style.visibility = "hidden";
+		id('north-bikes').style.visibility = "hidden";
+		id('south-bikes').style.visibility = "hidden";
+		id('north-peds').style.visibility = "visible";
+		id('south-peds').style.visibility = "visible";
 	}
 
 	function displayBothStats() {
@@ -179,6 +202,14 @@
 		id("insert-bike-north-here").style.visibility = "visible";
 		id("insert-ped-south-here").style.visibility = "visible";
 		id("insert-bike-south-here").style.visibility = "visible";
+		id('north-ped-count').style.visibility = "visible";
+		id('north-bike-count').style.visibility = "visible";
+		id('south-ped-count').style.visibility = "visible";
+		id('south-bike-count').style.visibility = "visible";
+		id('north-bikes').style.visibility = "visible";
+		id('south-bikes').style.visibility = "visible";
+		id('north-peds').style.visibility = "visible";
+		id('south-peds').style.visibility = "visible";
 	}
 
 	function id(idName) {
