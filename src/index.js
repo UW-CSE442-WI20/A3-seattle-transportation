@@ -33,7 +33,6 @@
 		    	changeTime();
 		    }, 500);
 		});
-		id()
 	}
 
 	function sizeElements() {
@@ -102,7 +101,7 @@
         
 		// Keep making icons until we've reached the necessary amount,
 		// staggering by 5 seconds
-		setInterval(function() {
+		intervalId = setInterval(function() {
 			// If the user has changed the time on us, we should 
 			// stop creating new icons.
 			if (x < numIcons - 1 && currentTime == time) {
