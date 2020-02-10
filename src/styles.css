@@ -65,11 +65,6 @@ input[type='radio']:after {
 	/* fill: pink; */ /* uncomment me to change the color of the icons... cool! :) */
 }
 
-#trail {
-	width: 80%;
-	margin: 0 auto;
-}
-
 header {
 	display: flex;
 	justify-content: center;
@@ -79,6 +74,11 @@ header {
 for some reason when I export the SVG smh */
 #trail rect {
 	fill: #C4C2C2;
+}
+
+#trail .end {
+	fill: #7AAF42;
+	stroke: none;
 }
 
 .slide-container {
@@ -133,13 +133,14 @@ for some reason when I export the SVG smh */
 
 .icon-container {
 	height: 30px;
-	margin-bottom: 8.5px;
+	margin-bottom: 0.8%;
 }
 
 .icon-container svg {
-	height: 25px;
+	height: 4%;
 	width: auto;
 	position: absolute;
+	
 }
 
 .hidden {
@@ -147,13 +148,18 @@ for some reason when I export the SVG smh */
 }
 
 #all-moving-icons {
-	margin: -150px;
+	margin: -12.4%;
 }
 
 
 #insert-bike-south-here, #insert-ped-south-here {
 	display: flex;
 	flex-direction: row-reverse;
+	margin-right: 16%;
+}
+
+#insert-bike-north-here, #insert-ped-north-here {
+	margin-left: 16%;
 }
 
 #compass {
