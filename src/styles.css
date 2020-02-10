@@ -81,15 +81,13 @@ for some reason when I export the SVG smh */
 	stroke: none;
 }
 
-.slide-container {
+#slide-container {
 	width: 100%; /* Width of the outside container */
 	text-align: center;
-	padding-top: 20px;
-	margin-top: 150px;
 }
   
 /* The slider itself */
-.slider {
+#slider {
 	-webkit-appearance: none;  /* Override default CSS styles */
 	appearance: none;
 	width: 80%; /* Full-width */
@@ -104,7 +102,7 @@ for some reason when I export the SVG smh */
 }
 
 /* Mouse-over effects */
-.slider:hover {
+#slider:hover {
 	opacity: 1; /* Fully shown on mouse-over */
 }
 
@@ -113,7 +111,7 @@ for some reason when I export the SVG smh */
 }
 
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-.slider::-webkit-slider-thumb {
+#slider::-webkit-slider-thumb {
 	-webkit-appearance: none; /* Override default look */
 	appearance: none;
 	border-radius: 50%;
@@ -123,7 +121,7 @@ for some reason when I export the SVG smh */
 	cursor: pointer; /* Cursor on hover */
 }
 
-.slider::-moz-range-thumb {
+#slider::-moz-range-thumb {
 	width: 25px; /* Set a specific slider handle width */
 	height: 25px; /* Slider handle height */
 	border-radius: 50%;

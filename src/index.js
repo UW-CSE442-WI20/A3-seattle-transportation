@@ -18,7 +18,7 @@
 
 	 function init() {
 		setupSlider(); 
-		id("range-slider").addEventListener("change", changeTime);
+		id("slider").addEventListener("change", changeTime);
 		id("cyclists").addEventListener("click", displayCyclistStats);
 		id("pedestrians").addEventListener("click", displayPedestrianStats);
 		id("both").addEventListener("click", displayBothStats);
@@ -27,14 +27,16 @@
 		    clearTimeout(resizeId);
 		    resizeId = setTimeout(function() {
 		    	// Stop the old transitions
+		    	id("slide-container").style.marginTop = id("trail").clientHeight / 1.8 + "px";
 		    	clearInterval(intervalId);
 		    	changeTime();
 		    }, 500);
 		});
+		id()
 	}
 
 	function setupSlider() {
-		let slider = id("range-slider");
+		let slider = id("slider");
 		let output = id("time");
 		output.innerHTML = "12:00 PM";
 		
@@ -51,6 +53,8 @@
 			}
 			output.innerHTML = time;
 		}
+		console.log(id("trail").clientHeight);
+		id("slide-container").style.marginTop = id("trail").clientHeight / 1.8 + "px";
 	}
 
 	function changeTime() {
