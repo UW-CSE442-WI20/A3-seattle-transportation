@@ -16,7 +16,7 @@ h2 {
 }
 
 body {
-	font-family: Helvetica, sans-serif;
+	font-family: "Lato", sans-serif;
 	background-color: rgb(248,232,205);
 }
 
@@ -96,9 +96,8 @@ for some reason when I export the SVG smh */
 	-webkit-appearance: none;  /* Override default CSS styles */
 	appearance: none;
 	width: 80%; /* Full-width */
-	height: 15px; /* Specified height */
+	height: 25px; /* Specified height */
 	background: #C4C2C2; /* Grey background */
-	border-radius: 5px;
 	outline: none; /* Remove outline */
 	opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
 	-webkit-transition: .2s; /* 0.2 seconds transition on hover */
@@ -119,7 +118,6 @@ for some reason when I export the SVG smh */
 #slider::-webkit-slider-thumb {
 	-webkit-appearance: none; /* Override default look */
 	appearance: none;
-	border-radius: 50%;
 	width: 25px; /* Set a specific slider handle width */
 	height: 25px; /* Slider handle height */
 	background: #7AAF42; /* Green background */
@@ -129,7 +127,6 @@ for some reason when I export the SVG smh */
 #slider::-moz-range-thumb {
 	width: 25px; /* Set a specific slider handle width */
 	height: 25px; /* Slider handle height */
-	border-radius: 50%;
 	background: #7AAF42; /* Green background */
 	cursor: pointer; /* Cursor on hover */
 }
