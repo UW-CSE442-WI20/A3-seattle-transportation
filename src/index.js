@@ -107,7 +107,7 @@
 			  	d3.select(insertDiv)
 			    	.node()
 			    	.append(data.documentElement);
-                startTransition(0, insertDiv, translation, endTranslation);
+                startTransition(insertDiv, translation, endTranslation);
 			})
 		timeoutId = setTimeout(function() {
 			updateCounts(typeOfIcon);
@@ -126,7 +126,7 @@
                           d3.select(insertDiv)
 		    				.node()
                             .append(data.documentElement)
-                        startTransition(x, insertDiv, translation, endTranslation, typeOfIcon);
+                        startTransition(insertDiv, translation, endTranslation, typeOfIcon);
 					  })
 			} else {
 				return;
@@ -135,13 +135,14 @@
 		}, 1000);
 	}
 
-	function startTransition(num, insertDiv, translation, endTranslation, typeOfIcon) {
+	function startTransition(insertDiv, translation, endTranslation, typeOfIcon) {
         d3.selectAll(insertDiv + " svg")
-			.filter(function(d, i) {
-			    return i >= num;
-			})
+			.filter(function() {
+		      return !this.classList.contains('transitioning')
+		    })
             .transition()
 			.attr("transform", translation)
+			.attr("class", "transitioning")
 			.duration(5000)
             .ease(d3.easeLinear)
             .on('end', function () { 
@@ -152,7 +153,8 @@
                 .ease(d3.easeLinear)
                 .style('opacity', 0)
                 .duration(370)
-            });
+            })
+            .remove();
 	}
 
 	function updateCounts(typeOfIcon) {
