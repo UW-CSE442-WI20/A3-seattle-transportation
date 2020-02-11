@@ -1,7 +1,7 @@
 h1 {
 	flex-basis: 45%;
 	margin-top: 3%;
-	margin-bottom: 3%;
+	margin-bottom: 0%;
 	margin-left: 5%;
 	text-align: center;
 	font-family: "Bebas Neue", sans-serif;
@@ -68,6 +68,7 @@ input[type='radio']:after {
 header {
 	display: flex;
 	justify-content: center;
+	margin-bottom: 0;
 }
 
 /* Needed this because the road doesn't show up as gray
@@ -141,7 +142,6 @@ for some reason when I export the SVG smh */
 	height: 4%;
 	width: auto;
 	position: absolute;
-	
 }
 
 .hidden {
@@ -175,4 +175,31 @@ for some reason when I export the SVG smh */
 
 .class {
 	font-weight: bold;
+}
+
+.line {
+	fill: none;
+	stroke-width: 1.5px;
+}
+
+.dot {
+    fill: #7AAF42;
+    stroke: #fff;
+}
+
+#chart-container {
+	display: flex;
+	justify-content: center;
+}
+
+.legend rect {
+  fill:white;
+  stroke:black;
+  opacity:0.8;
+}
+
+.grid line {
+  stroke: lightgrey;
+  stroke-opacity: 0.7;
+  shape-rendering: crispEdges;
 }
