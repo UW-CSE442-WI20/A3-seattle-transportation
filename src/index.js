@@ -192,13 +192,20 @@
 		  , width = window.innerWidth * 0.85  - margin.top - margin.bottom // Use the window's width 
 		  , height = window.innerHeight * 0.6 - margin.top - margin.bottom; // Use the window's height
 
+
+		var minDate = new Date(2020, 1, 13, 0, 0, 1);
+		var maxDate = new Date(2020, 1, 13, 23, 0, 0);
+
 		var x = d3.scaleLinear()
-    				.range([0, width]);
+					.range([0, width]);
+
 		var y = d3.scaleLinear()
-		    		.range([height, 0]);
-		var xAxis = d3.axisBottom()
-		    .scale(x)
-		    .ticks(23);
+					.range([height, 0]);
+					
+		var time = d3.scaleTime().domain([minDate, maxDate]).range([0, width]);
+
+		var xAxis = d3.axisTop(time).ticks(23);
+
 		var yAxis = d3.axisLeft()
 		    .scale(y);
 		var color = d3.scaleOrdinal(d3.schemeCategory10);
@@ -234,7 +241,6 @@
 
 		    svg.append("g")
 			    	.attr("class", "x axis")
-			    	.attr("transform", "translate(0," + height + ")")
 			    	.call(xAxis);
 
 			svg.append("g")
@@ -243,7 +249,6 @@
 			        .append("text");
 			svg.append("g")			
 			        .attr("class", "grid")
-			        .attr("transform", "translate(0," + height + ")")
 			        .call(xAxis
 			           .tickSize(-height)
 			           .tickFormat("")
@@ -259,7 +264,7 @@
 
 			svg.append("text")             
 			      .attr("x", width / 2)
-    			  .attr("y", height + 40)
+    			  .attr("y", 30)
 			      .style("text-anchor", "middle")
 			      .text("Time")
 			svg.append("text")
