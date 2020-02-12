@@ -12,7 +12,8 @@ h1 {
 h2 {
 	font-family: "Bebas Neue", sans-serif;
 	font-weight: lighter;
-	font-weight: 30pt;
+	font-size: 25pt;
+	margin: 0;
 }
 
 body {

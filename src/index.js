@@ -53,22 +53,26 @@
 	function setupSlider() {
 		let slider = id("slider");
 		let output = id("time");
-		output.innerHTML = "12:00 PM";
-		
+		changeSliderLabel(slider.value, output);
 		slider.oninput = function() {
-			let time = "";
-			if (this.value == 0) {
-				time = "12:00 AM";
-			} else if (this.value < 12) {
-				time = this.value + ":00 AM"
-			} else if (this.value == 12) {
-				time = "12:00 PM";
-			} else { // if (this.value > 12)
-				time = (this.value - 12) + ":00 PM";
-			}
-			output.innerHTML = time;
+			 changeSliderLabel(slider.value, output); 
 		}
+
 		id("slide-container").style.marginTop = id("trail").clientHeight / 1.8 + "px";
+	}
+
+	function changeSliderLabel(sliderValue, output) {
+		let time = "";
+		if (sliderValue == 0 || sliderValue == 24) {
+			time = "12:00 AM";
+		} else if (sliderValue < 12) {
+			time = sliderValue + ":00 AM"
+		} else if (sliderValue == 12) {
+			time = "12:00 PM";
+		} else { // if (sliderValue > 12)
+			time = (sliderValue - 12) + ":00 PM";
+		}
+		output.innerHTML = time;
 	}
 
 	function changeTime() {
@@ -84,7 +88,14 @@
 		}
 		
 		// Populate the new ped/bike content
-		currentTime = this.value != null ? this.value : currentTime;
+		if (this.value != null) {
+			if (this.value == 24) {
+				currentTime = 0;
+			} else {
+				currentTime = this.value;
+			}
+		}
+
 		let width = window.outerWidth - window.outerWidth / 5;
 		csv.then(function(data) {
 			d3.select("#p-north").text(data[currentTime].ped_north_avg);
