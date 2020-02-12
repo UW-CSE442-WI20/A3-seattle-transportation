@@ -298,15 +298,16 @@
 			           .tickFormat("")
 			        )
 
-			svg.append("g").attr("transform", "translate(30, 30)").call(legend);
-
 			// add the Y gridlines
 			svg.append("g")			
 			      .attr("class", "grid")
 			      .call(yAxis
 			          .tickSize(-width)
 			          .tickFormat("")
-			      )
+				  )
+				  
+			svg.append("g").attr("transform", "translate(30, 30)").call(legend);
+
 
 			svg.append("text")             
 			      .attr("x", width / 2)
