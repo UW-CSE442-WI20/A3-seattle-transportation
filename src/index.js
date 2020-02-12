@@ -120,11 +120,8 @@
 			  	d3.select(insertDiv)
 			    	.node()
 			    	.append(data.documentElement);
-                startTransition(time, insertDiv, translation, endTranslation);
+                startTransition(time, insertDiv, translation, endTranslation, typeOfIcon);
 			})
-		timeoutId = setTimeout(function() {
-			updateCounts(typeOfIcon);
-		}, 5000);
 		
         let x = 0;
 		// Keep making icons until we've reached the necessary amount,
