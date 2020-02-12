@@ -74,12 +74,19 @@
 	}
 	
 	function changeViews() {
-		id("map-content").style.display = "none";
-		id("content").style.visibility = "visible";
-		let radioButtons = qsa("input[type='radio']");
-		for (let i = 0; i < radioButtons.length; i++) {
-			radioButtons[i].classList.toggle("hidden");
-		}
+		id("map-content").classList.add("fade-out");
+		setTimeout(function() {
+			id("map-content").style.display = "none";
+			id("content").classList.add("fade-in");
+		}, 1000);
+		setTimeout(function() {
+			let radioButtons = qsa("input[type='radio']");
+			for (let i = 0; i < radioButtons.length; i++) {
+				radioButtons[i].classList.toggle("hidden");
+			}
+			document.body.scrollTop = 0; // For Safari
+  			document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+		}, 1000);
 	}
 
 	function sizeElements() {

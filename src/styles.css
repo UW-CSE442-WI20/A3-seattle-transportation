@@ -1,10 +1,28 @@
-#content {
-	visibility: hidden;
-}
+
 
 #map-container {
 	display: flex;
 	justify-content: center;
+}
+
+#map-content {
+    opacity: 1;
+    transition: none;
+}
+
+#map-content.fade-out {
+    opacity: 0;
+    transition: 1s opacity;
+}
+
+#content {
+    opacity: 0;
+    transition: none;
+}
+
+#content.fade-in {
+    opacity: 1;
+    transition: 1.5s opacity;
 }
 
 #map {
