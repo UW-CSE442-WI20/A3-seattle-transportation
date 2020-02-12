@@ -58,7 +58,6 @@
 		slider.oninput = function() {
 			 changeSliderLabel(slider.value, output); 
 		}
-
 	}
 
 	function changeSliderLabel(sliderValue, output) {
@@ -113,19 +112,20 @@
 	function createIcons(numIcons, insertDiv, typeOfIcon, time, translation, endTranslation) {
 		// Create the first one before the interval so that the user isn't
         // staring at a blank page
-		d3.xml(typeOfIcon)
+		
+        d3.select("*").interrupt();
+        d3.xml(typeOfIcon)
 			.then(data => {
 			  	d3.select(insertDiv)
 			    	.node()
 			    	.append(data.documentElement);
-                startTransition(insertDiv, translation, endTranslation);
+                startTransition(time, insertDiv, translation, endTranslation);
 			})
 		timeoutId = setTimeout(function() {
 			updateCounts(typeOfIcon);
 		}, 5000);
 		
         let x = 0;
-        
 		// Keep making icons until we've reached the necessary amount,
 		// staggering by 1 seconds
 		intervalId = setInterval(function() {
@@ -137,7 +137,7 @@
                           d3.select(insertDiv)
 		    				.node()
                             .append(data.documentElement)
-                        startTransition(insertDiv, translation, endTranslation, typeOfIcon);
+                        startTransition(time, insertDiv, translation, endTranslation, typeOfIcon);
 					  })
 			} else {
 				return;
@@ -146,7 +146,8 @@
 		}, 1000);
 	}
 
-	function startTransition(insertDiv, translation, endTranslation, typeOfIcon) {
+
+	function startTransition(selectedTime, insertDiv, translation, endTranslation, typeOfIcon) {
         d3.selectAll(insertDiv + " svg")
 			.filter(function() {
 		      return !this.classList.contains('transitioning')
@@ -157,15 +158,18 @@
 			.duration(5000)
             .ease(d3.easeLinear)
             .on('end', function () { 
-            	updateCounts(typeOfIcon);
+            	if (currentTime == selectedTime) {
+            		updateCounts(typeOfIcon);
+            	}
                 d3.select(this)
-                .transition()
-                .attr("transform", endTranslation)
-                .ease(d3.easeLinear)
-                .style('opacity', 0)
-                .duration(370)
+                	.transition()
+                	.attr("transform", endTranslation)
+                	.ease(d3.easeLinear)
+                	.style('opacity', 0)
+                	.duration(370)
+                	.remove();
             })
-            .remove();
+           
 	}
 
 	function updateCounts(typeOfIcon) {
