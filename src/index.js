@@ -4,6 +4,7 @@
 	const bike = require("./SVG/bike.svg");
 	const pedReverse = require("./SVG/ped-reverse.svg");
 	const bikeReverse = require("./SVG/bike-reverse.svg");
+	const d3Legend = require("d3-svg-legend");
 	// Keep track of the selected time so that if the user clicks to a new
 	// time, we don't continue populating the icons from the old time
 	// in createIcons!
@@ -250,7 +251,12 @@
 	      		})
 	      		.y(function(d) {
 	        		return y(d.number);
-	      		});
+				  });
+				  
+		let legend = d3Legend.legendColor()
+						.scale(color)
+						.shape("circle")
+						.labels(["Avg. Northbound Pedestrians", "Avg. Southbound Pedestrians", "Avg. Northbound Cyclists", "Avg. Southbound Cyclists"]);
 
 
 	    // A lot of this is from 
@@ -291,6 +297,8 @@
 			           .tickSize(-height)
 			           .tickFormat("")
 			        )
+
+			svg.append("g").attr("transform", "translate(30, 30)").call(legend);
 
 			// add the Y gridlines
 			svg.append("g")			
