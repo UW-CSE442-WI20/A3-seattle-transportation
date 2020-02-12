@@ -48,8 +48,10 @@
 
 #description-container {
 	text-align: center;
-	margin: 0 10%;
+	margin-left: auto;
+	margin-right: auto;
 	font-size: 20pt;
+	max-width: 50%;
 }
 
 .hide {
