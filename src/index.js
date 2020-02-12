@@ -34,6 +34,7 @@
 		    clearTimeout(resizeId);
 		    resizeId = setTimeout(function() {
 		    	// Stop the old transitions
+		    	window.location.reload(false)
 		    	sizeElements();
 		    	clearInterval(intervalId);
 		    	changeTime();
@@ -169,7 +170,6 @@
                 	.duration(370)
                 	.remove();
             })
-           
 	}
 
 	function updateCounts(typeOfIcon) {
