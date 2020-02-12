@@ -43,10 +43,11 @@
 	}
 
 	function sizeElements() {
+		id("all-moving-icons").style.height = id("trail").clientHeight / 2.5 + "px";
 		id("slide-container").style.marginTop = id("trail").clientHeight / 1.8 + "px";
 		let containers = qsa(".icon-container");
 		for (let i = 0; i < containers.length; i++) {
-		    containers[i].style.marginBottom = id("trail").clientHeight / 22 + "px";
+		    containers[i].style.marginBottom = id("trail").clientHeight / 30 + "px";;
 		}
 	}
 
@@ -58,7 +59,6 @@
 			 changeSliderLabel(slider.value, output); 
 		}
 
-		id("slide-container").style.marginTop = id("trail").clientHeight / 1.8 + "px";
 	}
 
 	function changeSliderLabel(sliderValue, output) {
@@ -96,7 +96,7 @@
 			}
 		}
 
-		let width = window.outerWidth - window.outerWidth / 5;
+		let width = window.innerWidth * 0.7;
 		csv.then(function(data) {
 			d3.select("#p-north").text(data[currentTime].ped_north_avg);
 			createIcons(data[currentTime].ped_north_avg, "#insert-ped-north-here", ped, currentTime, `translate(${width},0)`, `translate(${width + 20},0)`);
@@ -195,7 +195,6 @@
 		var margin = {top: 50, right: 50, bottom: 50, left: 50}
 		  , width = window.innerWidth * 0.85  - margin.top - margin.bottom // Use the window's width 
 		  , height = window.innerHeight * 0.6 - margin.top - margin.bottom; // Use the window's height
-
 
 		var x = d3.scaleLinear()
     				.range([0, width]);
@@ -390,5 +389,9 @@
 
 	function qsa(query) {
 		return document.querySelectorAll(query);
+	}
+
+	function qs(query) {
+		return document.querySelector(query);
 	}
 })();
