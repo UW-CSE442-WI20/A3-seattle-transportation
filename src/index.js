@@ -78,6 +78,8 @@
 	function changeTime() {
 		// Clear out all the old ped/bike content
 		clearTimeout(timeoutId);
+		clearInterval(intervalId);
+
 		id('north-ped-count').textContent = 0;
 		id('north-bike-count').textContent = 0;
 		id('south-ped-count').textContent = 0;
@@ -113,16 +115,14 @@
 	function createIcons(numIcons, insertDiv, typeOfIcon, time, translation, endTranslation) {
 		// Create the first one before the interval so that the user isn't
         // staring at a blank page
-		
-        d3.select("*").interrupt();
-        d3.xml(typeOfIcon)
+		d3.select("*").interrupt();
+		d3.xml(typeOfIcon)
 			.then(data => {
-			  	d3.select(insertDiv)
-			    	.node()
-			    	.append(data.documentElement);
-                startTransition(time, insertDiv, translation, endTranslation, typeOfIcon);
+				d3.select(insertDiv)
+					.node()
+					.append(data.documentElement);
+				startTransition(time, insertDiv, translation, endTranslation, typeOfIcon);
 			})
-		
         let x = 0;
 		// Keep making icons until we've reached the necessary amount,
 		// staggering by 1 seconds
@@ -138,6 +138,7 @@
                         startTransition(time, insertDiv, translation, endTranslation, typeOfIcon);
 					  })
 			} else {
+				numIcons = 0;
 				return;
 			}
 		    x++;
@@ -146,27 +147,28 @@
 
 
 	function startTransition(selectedTime, insertDiv, translation, endTranslation, typeOfIcon) {
-        d3.selectAll(insertDiv + " svg")
+		d3.selectAll(insertDiv + " svg")
 			.filter(function() {
-		      return !this.classList.contains('transitioning')
-		    })
-            .transition()
+			return !this.classList.contains('transitioning')
+			})
+			.transition()
 			.attr("transform", translation)
 			.attr("class", "transitioning")
 			.duration(5000)
-            .ease(d3.easeLinear)
-            .on('end', function () { 
-            	if (currentTime == selectedTime) {
-            		updateCounts(typeOfIcon);
-            	}
-                d3.select(this)
-                	.transition()
-                	.attr("transform", endTranslation)
-                	.ease(d3.easeLinear)
-                	.style('opacity', 0)
-                	.duration(370)
-                	.remove();
-            })
+			.ease(d3.easeLinear)	
+			.on('end', function () { 
+				if (currentTime == selectedTime) {
+					updateCounts(typeOfIcon);
+				}
+				d3.select(this)
+					.transition()
+					.attr("transform", endTranslation)
+					.ease(d3.easeLinear)
+					.style('opacity', 0)
+					.duration(370)
+					.remove();
+			})
+			.remove();
 	}
 
 	function updateCounts(typeOfIcon) {
