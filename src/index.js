@@ -45,7 +45,7 @@
 		loadChart();
 	}
 
-	// From https://gist.github.com/KoGor/7912246
+	// Lines 49-80 from https://gist.github.com/KoGor/7912246
 	function animatePath() {
 		let svg = d3.select("svg"),
 	  	svgWidth = svg.attr("width"),
@@ -226,28 +226,25 @@
 	}
 
 	function loadChart() {
-		var margin = {top: 50, right: 50, bottom: 50, left: 50}
+		let margin = {top: 50, right: 50, bottom: 50, left: 50}
 		  , width = window.innerWidth * 0.85  - margin.top - margin.bottom // Use the window's width 
 		  , height = window.innerHeight * 0.6 - margin.top - margin.bottom; // Use the window's height
 
 
-		var minDate = new Date(2020, 1, 13, 0, 0, 1);
-		var maxDate = new Date(2020, 1, 13, 23, 0, 0);
+		let minDate = new Date(2020, 1, 13, 0, 0, 1);
+		let maxDate = new Date(2020, 1, 13, 23, 0, 0);
 
-		var x = d3.scaleLinear()
+		let x = d3.scaleLinear()
 					.range([0, width]);
-
-		var y = d3.scaleLinear()
+		let y = d3.scaleLinear()
 					.range([height, 0]);
 					
-		var time = d3.scaleTime().domain([minDate, maxDate]).range([0, width]);
-
-		var xAxis = d3.axisTop(time).ticks(23);
-
-		var yAxis = d3.axisLeft()
+		let time = d3.scaleTime().domain([minDate, maxDate]).range([0, width]);
+		let xAxis = d3.axisTop(time).ticks(23);
+		let yAxis = d3.axisLeft()
 		    .scale(y);
-		var color = d3.scaleOrdinal(d3.schemeCategory10);
-	    var line = d3.line()
+		let color = d3.scaleOrdinal(d3.schemeCategory10);
+	    let line = d3.line()
 	      		.x(function(d) {
 	        		return x(d.time_of_day);
 	      		})
@@ -255,8 +252,11 @@
 	        		return y(d.number);
 	      		});
 
+
+	    // A lot of this is from 
+	    // http://bl.ocks.org/mgold/6a32cec6380b6ce75c1e
 	    d3.csv(csvFile).then(function(data) {
-	    	var svg = d3.select("#chart").append("svg")
+	    	let svg = d3.select("#chart").append("svg")
 		      .attr("width", width + margin.left + margin.right)
 		      .attr("height", height + margin.top + margin.bottom)
 		      .append("g")
@@ -266,7 +266,7 @@
 		      return key !== "time_of_day";
 		    }));
 
-		    var people = color.domain().map(function(name) {
+		    let people = color.domain().map(function(name) {
 			    return {
 			      name: name,
 			      values: data.map(function(d) {
@@ -292,7 +292,7 @@
 			           .tickFormat("")
 			        )
 
-			  // add the Y gridlines
+			// add the Y gridlines
 			svg.append("g")			
 			      .attr("class", "grid")
 			      .call(yAxis
@@ -312,7 +312,7 @@
 			      .attr("transform", "rotate(-90)")
 			      .text("Number of People");
 
-			var person = svg.selectAll(".people")
+			let person = svg.selectAll(".people")
 			    	.data(people)
 			    	.enter().append("g")
 			    	.attr("class", "people");   
@@ -323,17 +323,8 @@
 		      	.attr("data-legend",function(d) { return d.name})
 		      	.style("stroke", function(d) { return color(d.name); });
 
-			    console.log(people);
-			// person.selectAll("circle")
-			//     .data(function(d){return d.values})
-			//     .enter()
-			//     .append("circle")
-			//     .attr("r", 3)
-			//     .attr("cx", function(d) { return x(d.time_of_day); })
-			//     .attr("cy", function(d) { return y(d.number); })
-			//     .style("fill", function(d) { return '#000000';});
-
-		    var mouseG = svg.append("g")
+		    // From https://bl.ocks.org/larsenmtl/e3b8b7c2ca4787f77d78f58d41c3da91
+		    let mouseG = svg.append("g")
 		      .attr("class", "mouse-over-effects");
 
 		    mouseG.append("path") // this is the black vertical line to follow mouse
@@ -342,9 +333,9 @@
 		      .style("stroke-width", "1px")
 		      .style("opacity", "0");
 		      
-		    var lines = document.getElementsByClassName('line');
+		    let lines = document.getElementsByClassName('line');
 
-		    var mousePerLine = mouseG.selectAll('.mouse-per-line')
+		    let mousePerLine = mouseG.selectAll('.mouse-per-line')
 		      .data(people)
 		      .enter()
 		      .append("g")
@@ -384,21 +375,21 @@
 		          .style("opacity", "1");
 		      })
 		      .on('mousemove', function() { // mouse moving over canvas
-		        var mouse = d3.mouse(this);
+		        let mouse = d3.mouse(this);
 		        d3.select(".mouse-line")
 		          .attr("d", function() {
-		            var d = "M" + mouse[0] + "," + height;
+		            let d = "M" + mouse[0] + "," + height;
 		            d += " " + mouse[0] + "," + 0;
 		            return d;
 		          });
 
 		        d3.selectAll(".mouse-per-line")
 		          .attr("transform", function(d, i) {
-		            var xDate = x.invert(mouse[0]),
+		            let xDate = x.invert(mouse[0]),
 		                bisect = d3.bisector(function(d) { return d.time_of_day; }).right;
 		                idx = bisect(d.values, xDate);
 		            
-		            var beginning = 0,
+		            let beginning = 0,
 		                end = lines[i].getTotalLength(),
 		                target = null;
 
