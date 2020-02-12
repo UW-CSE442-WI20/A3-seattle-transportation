@@ -63,7 +63,7 @@
 
 	function changeSliderLabel(sliderValue, output) {
 		let time = "";
-		if (sliderValue == 0 || sliderValue == 24) {
+		if (sliderValue == 0) {
 			time = "12:00 AM";
 		} else if (sliderValue < 12) {
 			time = sliderValue + ":00 AM"
@@ -88,13 +88,8 @@
 		}
 		
 		// Populate the new ped/bike content
-		if (this.value != null) {
-			if (this.value == 24) {
-				currentTime = 0;
-			} else {
-				currentTime = this.value;
-			}
-		}
+
+		currentTime = this.value != null ? this.value : currentTime;
 
 		let width = window.innerWidth * 0.7;
 		csv.then(function(data) {
