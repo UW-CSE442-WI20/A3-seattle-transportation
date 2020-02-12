@@ -17,8 +17,10 @@
 	window.addEventListener("load", init);
 
 	 function init() {
+	 	animatePath();
 		sizeElements();
 		setupSlider(); 
+		id("switch-views").addEventListener("click", changeViews);
 		id("slider").addEventListener("change", changeTime);
 		id("cyclists").addEventListener("click", function() {
 			displayStats("visible", "hidden");
@@ -41,6 +43,40 @@
 		    }, 500);
 		});
 		loadChart();
+	}
+
+	// From https://gist.github.com/KoGor/7912246
+	function animatePath() {
+		let svg = d3.select("svg"),
+	  	svgWidth = svg.attr("width"),
+	  	svgHeight = svg.attr("height");
+
+	  	let paths = svg.selectAll("path")
+	    	.call(transition);
+	   	}
+    
+    function transition(path) {
+        path.transition()
+        	.duration(7500)
+        	.attrTween("stroke-dasharray", tweenDash)
+        	// .on("end", function() { d3.select(this).call(transition); }); // infinite loop
+  	}
+	  
+	function tweenDash() {
+		let l = this.getTotalLength(),
+		    i = d3.interpolateString("0," + l, l + "," + l); // interpolation of stroke-dasharray attr
+		return function(t) {
+		  return i(t);
+		};
+	}
+	
+	function changeViews() {
+		id("map-content").style.display = "none";
+		id("content").style.visibility = "visible";
+		let radioButtons = qsa("input[type='radio']");
+		for (let i = 0; i < radioButtons.length; i++) {
+			radioButtons[i].classList.toggle("hidden");
+		}
 	}
 
 	function sizeElements() {

@@ -1,4 +1,76 @@
-html, body {height:100%; width: 100%;}
+#content {
+	visibility: hidden;
+}
+
+#map-container {
+	display: flex;
+	justify-content: center;
+}
+
+#map {
+  position: relative;
+  display: inline-block; /* <= shrinks container to image size */
+  width: 50%;
+  height: auto;
+}
+
+#map img { /* <= optional, for responsiveness */
+   display: block;
+   max-width: 100%;
+   height: auto;
+}
+
+#map svg {
+  position: absolute;
+  top: 8%;
+  left: 11%;
+  max-width: 100%;
+  height: 85%;
+}
+
+#line path {
+	fill: none;
+	stroke: red;
+	stroke-width: 10px;	
+}
+
+#sign-container {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#sign {
+	width: 20%;
+	z-index: 1;
+	margin-top: -10%;
+	padding-right: 15%;
+}
+
+#description-container {
+	text-align: center;
+	margin: 0 10%;
+	font-size: 20pt;
+}
+
+.hide {
+	display: none;
+}
+
+button {
+	font-size: 20px;
+    padding: 10px 20px;
+    margin-bottom: 0;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    color: #FFF;
+    background-color: #7AAF42;
+    border-color: #ccc;
+    border-radius: 10%;
+}
 
 h1 {
 	flex-basis: 45%;
@@ -34,6 +106,14 @@ body {
 
 #dimensions label {
 	margin-left: 2%;
+}
+
+input[type='radio'].hidden:after {
+	visibility: hidden;
+}
+
+input[type='radio'].hidden:checked:after {
+	visibility: hidden;
 }
 
 input[type='radio']:checked:after {
@@ -74,6 +154,10 @@ header {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 0;
+}
+
+#trail {
+	visibility: "visible";
 }
 
 /* Needed this because the road doesn't show up as gray
@@ -183,8 +267,10 @@ for some reason when I export the SVG smh */
 }
 
 #north-arrow {
+	vertical-align: middle;
 	height: 30px;
 	width: auto;
+	padding-right: 10px;
 }
 
 .class {
