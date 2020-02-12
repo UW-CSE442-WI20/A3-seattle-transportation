@@ -63,7 +63,7 @@
 
 	function changeSliderLabel(sliderValue, output) {
 		let time = "";
-		if (sliderValue == 0 || sliderValue == 24) {
+		if (sliderValue == 0) {
 			time = "12:00 AM";
 		} else if (sliderValue < 12) {
 			time = sliderValue + ":00 AM"
@@ -90,13 +90,8 @@
 		}
 		
 		// Populate the new ped/bike content
-		if (this.value != null) {
-			if (this.value == 24) {
-				currentTime = 0;
-			} else {
-				currentTime = this.value;
-			}
-		}
+
+		currentTime = this.value != null ? this.value : currentTime;
 
 		let width = window.innerWidth * 0.7;
 		csv.then(function(data) {
@@ -199,13 +194,20 @@
 		  , width = window.innerWidth * 0.85  - margin.top - margin.bottom // Use the window's width 
 		  , height = window.innerHeight * 0.6 - margin.top - margin.bottom; // Use the window's height
 
+
+		var minDate = new Date(2020, 1, 13, 0, 0, 1);
+		var maxDate = new Date(2020, 1, 13, 23, 0, 0);
+
 		var x = d3.scaleLinear()
-    				.range([0, width]);
+					.range([0, width]);
+
 		var y = d3.scaleLinear()
-		    		.range([height, 0]);
-		var xAxis = d3.axisBottom()
-		    .scale(x)
-		    .ticks(23);
+					.range([height, 0]);
+					
+		var time = d3.scaleTime().domain([minDate, maxDate]).range([0, width]);
+
+		var xAxis = d3.axisTop(time).ticks(23);
+
 		var yAxis = d3.axisLeft()
 		    .scale(y);
 		var color = d3.scaleOrdinal(d3.schemeCategory10);
@@ -241,7 +243,6 @@
 
 		    svg.append("g")
 			    	.attr("class", "x axis")
-			    	.attr("transform", "translate(0," + height + ")")
 			    	.call(xAxis);
 
 			svg.append("g")
@@ -250,7 +251,6 @@
 			        .append("text");
 			svg.append("g")			
 			        .attr("class", "grid")
-			        .attr("transform", "translate(0," + height + ")")
 			        .call(xAxis
 			           .tickSize(-height)
 			           .tickFormat("")
@@ -266,7 +266,7 @@
 
 			svg.append("text")             
 			      .attr("x", width / 2)
-    			  .attr("y", height + 40)
+    			  .attr("y", 30)
 			      .style("text-anchor", "middle")
 			      .text("Time")
 			svg.append("text")
