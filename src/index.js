@@ -60,7 +60,9 @@
         path.transition()
         	.duration(7500)
         	.attrTween("stroke-dasharray", tweenDash)
-        	// .on("end", function() { d3.select(this).call(transition); }); // infinite loop
+        	.on("end", function() { 
+        		id("star").style.visibility = "visible"; 
+        	}); 
   	}
 	  
 	function tweenDash() {

@@ -14,7 +14,7 @@
   height: auto;
 }
 
-#map img { /* <= optional, for responsiveness */
+#map map-image { /* <= optional, for responsiveness */
    display: block;
    max-width: 100%;
    height: auto;
@@ -32,6 +32,14 @@
 	fill: none;
 	stroke: red;
 	stroke-width: 10px;	
+}
+
+#star {
+	position: absolute;
+	width: 5%;
+	top: 65.5%;
+  	left: 67.1%;
+  	visibility: hidden;
 }
 
 #sign-container {
@@ -58,8 +66,16 @@
 	display: none;
 }
 
-#map-description {
+.map-description {
 	text-align: left;
+}
+
+a {
+	color: #2E64AF;
+}
+
+a:hover {
+	color: #86BDE7;
 }
 
 button {
