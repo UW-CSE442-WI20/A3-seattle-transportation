@@ -253,7 +253,9 @@
 		let xAxis = d3.axisTop(time).ticks(23);
 		let yAxis = d3.axisLeft()
 		    .scale(y);
-		let color = d3.scaleOrdinal(d3.schemeCategory10);
+		let color = d3.scaleOrdinal()
+			.domain(["ped_south_avg", "bike_south_avg", "bike_north_avg", "ped_north_avg"])
+	    	.range(["#93B4D8", "#416B99" , "#F49537", "#C17937"]);
 	    let line = d3.line()
 	      		.x(function(d) {
 	        		return x(d.time_of_day);
@@ -265,7 +267,7 @@
 		let legend = d3Legend.legendColor()
 						.scale(color)
 						.shape("circle")
-						.labels(["Avg. Northbound Pedestrians", "Avg. Southbound Pedestrians", "Avg. Northbound Cyclists", "Avg. Southbound Cyclists"]);
+						.labels(["Avg. Southbound Pedestrians", "Avg. Southbound Cyclists", "Avg. Northbound Pedestrians", "Avg. Northbound Cyclists"]);
 
 
 	    // A lot of this is from 
