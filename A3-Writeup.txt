@@ -1,0 +1,79 @@
+Assignment 3: Interactive Visualization
+Olga Andreeva, Patty Popp, Suzanne Kaltenbach
+
+Rationale for Design Choices:
+With our visualization, we wanted to simulate what it feels like to be on the Burke-Gilman Trail at a specific time of day.
+We chose to accomplish this goal with three different visualizations: an overview map which provides an aerial perspective
+of the region the Burke-Gilman spans, a zoomed-in trail which allows users to pick a time of day and see the northbound and
+southbound traffic, and a summary line graph that shows trail usage across all times of day. 
+
+We chose to use a map with an animated trail because we found it to be an expressive and effective way to provide context
+about the data. A static image would simply not have been nearly as engaging for the viewer as an animated one and the
+animated map provides a good introduction into our visualization topic. In addition, by giving some background information
+about what our data visualizations are showing prior to physically displaying them, we are able to convey pertinent
+information to the viewer in pieces, making it less likely that we overwhelm them.
+
+We chose to introduce an animated, interactive trail because we felt like it best simulated a trail user’s experience.
+The data in the King County records provided the number of cyclists and pedestrians for every hour for every day, so we
+decided to average the number across every day and across every hour so that the data would be easier to digest. In order to
+be able to see the state of the trail every hour, we put a slider underneath the trail so that users can experiment with
+changing the display hour and watching the icons move and the counts build up at different rates. By having the icons move
+faster during busier times of day and move slower during more lightly trafficked times, we are letting the user put themselves
+into the shoes of a Burke-Gilman Trail commuter. The data that we used provided information about cyclist and pedestrian usage
+data (both northbound and southbound) at a particular point on the BGT (NE 70th street), so we decided to visualize the types
+of users by displaying different icons (e.g. walking person icon for pedestrians) and the cardinal movement directions by
+animating them in opposite directions. We introduced radio buttons at the top of the page so that users can filter their data
+and get back visualizations that are relevant to what they care about. We considered having the trail be vertical with icons
+moving from top-to-bottom and bottom-to-top (to better simulate what it would like from a user’s perspective), but we felt like
+it would be easier on the eyes of the viewers to see the icons moving in a horizontal manner. We also considered having a
+static bar graph for trail usage for a specific hour, but ended up using animation because it made our visualization
+significantly more engaging and it made sense with the data that we were trying to visualize.
+
+And finally, we chose to include a summary line graph because we felt like it was important for viewers to be able to get a
+quick summary of the data and notice trends without having to click through all of the time options. We chose to make the
+graph interactive as well because it gives the user more agency than a static graph and it allows us to show the different
+counts more granularly.
+
+
+Overview of Development Process:
+After picking our dataset, we studied the data and discussed how we wanted to visualize it most effectively. We made some
+sketches of what we wanted the visualization to look like and talked about where to position the elements and how to design
+the user experience. Once we had a general idea of what we wanted to do, we split up the work evenly.
+
+Suzanne took on the initial data wrangling effort of getting the data into a form that could easily be binded to d3 and used
+for visualizations, as needed. Meanwhile, Olga laid out the initial SVG graphics (e.g. the trail region, the trees, the cyclist
+and pedestrian icons, etc.)  to give the main page some context and put in the radio buttons. 
+
+Prior to doing any animation / visualization, we simply printed out the statistics at the bottom of the page so we could
+cross-check with our CSV file. Patty improved the styling of the page by adding a more descriptive title, more engaging font,
+etc., and got the radio buttons to perform their intended functionality (i.e., filter based on user selection). Patty also set
+up the slider that would allow users to pick the time of day that they wish to view the data for.
+
+Once we had a functioning, responsive printout of the data based on the user’s radio button and slider selection, we moved onto
+the animation of the icons and the build-up of the dynamic counts, an effort led by Olga and Suzanne. After working out some
+bugs pertaining to the trail animation, we had a group discussion about what we wanted to actually convey with our visualization
+and realized that we wanted to 1) change the speed of the transitions based on the amount of traffic on the trail at that time,
+and 2) have an easy way for viewers to be able to get an overview of the trial usage data. Olga led both of these efforts and
+in doing so, let us convey a lot more information. Olga built the main line graph functionality including the interactive
+portions, and Patty changed the previously linear axis to a time-scale axis and set up the legend for the chart.
+
+Finally, Olga put in the introductory map with the trail animation to give the viewer more context about the trail and through
+working together with Patty, wrote up a succinct description of the map and the data so that users are informed prior to
+looking at our visualizations.
+
+The application development process took roughly 50 hours total, with the most challenging aspects being the transitions for
+the animated trail visualization (since transitions have proven to be challenging to wrap our heads around and we have a lot
+of animations going on at once) and the scale for the time axis. Although creating a time scale doesn’t require too many lines
+of d3 code, it did take us a while to figure out because the concept of scales is quite abstract  and it was difficult to
+determine what values we wanted to map to and from without sifting through a lot of deprecated tutorials and doing a lot of
+experimenting. The other aspect of the development process that took a lot of time was the deployment. After battling  with
+the nuances of Parcel for many hours, Olga and Suzanne were finally able to successfully “deploy” using ngrok. 
+
+
+Acknowledgements:
+Range slider: https://www.w3schools.com/howto/howto_js_rangeslider.asp 
+Chart legend: https://d3-legend.susielu.com/
+Time scale: https://www.dashingd3js.com/lessons/d3-time-scales
+Multi-line chart: http://bl.ocks.org/mgold/6a32cec6380b6ce75c1e
+Mouse-over chart effect: https://bl.ocks.org/larsenmtl/e3b8b7c2ca4787f77d78f58d41c3da91
+Line path transition: https://gist.github.com/KoGor/7912246
