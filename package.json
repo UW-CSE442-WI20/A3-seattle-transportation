@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html; rm -rf docs; mv dist docs;",
+    "build": "parcel build src/index.html --public-url https://uw-cse442-wi20.github.io/A3-seattle-transportation/;            rm -rf docs; mv dist docs;",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "d3": "^5.15.0",
-    "d3-svg-legend": "^2.25.6"
+    "d3-svg-legend": "^2.25.6",
+    "parcel": "^1.12.4"
   }
 }
