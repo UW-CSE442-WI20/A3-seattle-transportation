@@ -162,7 +162,7 @@
 				d3.select(insertDiv)
 					.node()
 					.append(data.documentElement);
-				startTransition(time, insertDiv, translation, endTranslation, typeOfIcon);
+				startTransition(numIcons, time, insertDiv, translation, endTranslation, typeOfIcon);
 			})
         let x = 0;
 		// Keep making icons until we've reached the necessary amount,
@@ -176,18 +176,18 @@
                           d3.select(insertDiv)
 		    				.node()
                             .append(data.documentElement)
-                        startTransition(time, insertDiv, translation, endTranslation, typeOfIcon);
+                        startTransition(numIcons, time, insertDiv, translation, endTranslation, typeOfIcon);
 					  })
 			} else {
 				numIcons = 0;
 				return;
 			}
 		    x++;
-		}, 1000);
+		}, 10000 / numIcons);
 	}
 
 
-	function startTransition(selectedTime, insertDiv, translation, endTranslation, typeOfIcon) {
+	function startTransition(numIcons, selectedTime, insertDiv, translation, endTranslation, typeOfIcon) {
 		d3.selectAll(insertDiv + " svg")
 			.filter(function() {
 			return !this.classList.contains('transitioning')
@@ -195,7 +195,7 @@
 			.transition()
 			.attr("transform", translation)
 			.attr("class", "transitioning")
-			.duration(5000)
+			.duration(60000 / numIcons)
 			.ease(d3.easeLinear)	
 			.on('end', function () { 
 				if (currentTime == selectedTime) {
