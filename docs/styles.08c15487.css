@@ -1,0 +1,352 @@
+
+
+#map-container {
+	display: flex;
+	justify-content: center;
+}
+
+#map-content {
+    opacity: 1;
+    transition: none;
+}
+
+#map-content.fade-out {
+    opacity: 0;
+    transition: 1s opacity;
+}
+
+#content {
+    opacity: 0;
+    transition: none;
+}
+
+#content.fade-in {
+    opacity: 1;
+    transition: 1.5s opacity;
+}
+
+#map {
+  position: relative;
+  display: inline-block; /* <= shrinks container to image size */
+  width: 50%;
+  height: auto;
+}
+
+#map map-image { /* <= optional, for responsiveness */
+   display: block;
+   max-width: 100%;
+   height: auto;
+}
+
+#map svg {
+  position: absolute;
+  top: 8%;
+  left: 11%;
+  max-width: 100%;
+  height: 85%;
+}
+
+#line path {
+	fill: none;
+	stroke: red;
+	stroke-width: 10px;	
+}
+
+#star {
+	position: absolute;
+	width: 5%;
+	top: 65.5%;
+  	left: 67.1%;
+  	visibility: hidden;
+}
+
+#sign-container {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#sign {
+	width: 20%;
+	z-index: 1;
+	margin-top: -10%;
+	padding-right: 15%;
+}
+
+#description-container {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 15pt;
+	max-width: 50%;
+}
+
+.hide {
+	display: none;
+}
+
+.map-description {
+	text-align: left;
+}
+
+a {
+	color: #2E64AF;
+}
+
+a:hover {
+	color: #86BDE7;
+}
+
+button {
+	font-size: 20px;
+    padding: 10px 20px;
+    margin-bottom: 0;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    color: #FFF;
+    background-color: #7AAF42;
+    border-color: #ccc;
+    border-radius: 10%;
+}
+
+button:hover {
+	background-color: #97cb57;
+}
+
+h1 {
+	flex-basis: 45%;
+	margin-top: 3%;
+	margin-bottom: 0%;
+	margin-left: 5%;
+	text-align: center;
+	font-family: "Bebas Neue", sans-serif;
+	font-weight: lighter;
+	font-size: 35pt;
+}
+
+h2 {
+	font-family: "Bebas Neue", sans-serif;
+	font-weight: lighter;
+	font-size: 25pt;
+	margin: 0;
+	text-align: center;
+	padding-left: 75px;
+}
+
+body {
+	font-family: "Lato", sans-serif;
+	background-color: rgb(248,232,205);
+}
+
+#dimensions {
+	margin-top: 3.4%;
+	display: flex;
+	justify-content: center;
+	width: 550px;
+}
+
+#dimensions label {
+	margin-left: 2%;
+}
+
+input[type='radio'].hidden:after {
+	visibility: hidden;
+}
+
+input[type='radio'].hidden:checked:after {
+	visibility: hidden;
+}
+
+input[type='radio']:checked:after {
+    width: 12px;
+    height: 12px;
+    border-radius: 15px;
+    top: -1px;
+    left: -2px;
+    position: relative;
+    background-color: #7AAF42;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:after {
+    width: 12px;
+    height: 12px;
+    border-radius: 15px;
+    top: -1px;
+    left: -2px;
+    position: relative;
+    background-color: #C4C2C2;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+#dimensions svg {
+	height: 30px;
+	width: auto;
+	/* fill: pink; */ /* uncomment me to change the color of the icons... cool! :) */
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 0;
+}
+
+#trail {
+	visibility: "visible";
+}
+
+/* Needed this because the road doesn't show up as gray
+for some reason when I export the SVG smh */
+#trail rect {
+	fill: #C4C2C2;
+}
+
+#trail text {
+	font-size: 20px;
+}
+
+#trail .end {
+	fill: #7AAF42;
+	stroke: none;
+}
+
+#slide-container {
+	width: 100%; /* Width of the outside container */
+	text-align: center;
+}
+  
+/* The slider itself */
+#slider {
+	-webkit-appearance: none;  /* Override default CSS styles */
+	appearance: none;
+	width: 80%; /* Full-width */
+	height: 15px; /* Specified height */
+	border-radius: 3px;
+	background: #C4C2C2; /* Grey background */
+	outline: none; /* Remove outline */
+	opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+	-webkit-transition: .2s; /* 0.2 seconds transition on hover */
+	transition: opacity .2s;
+	display: inline-block;
+}
+
+/* Mouse-over effects */
+#slider:hover {
+	opacity: 1; /* Fully shown on mouse-over */
+}
+
+#totals {
+	margin-left: 11%;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+#slider::-webkit-slider-thumb {
+	-webkit-appearance: none; /* Override default look */
+	appearance: none;
+	width: 22px; /* Set a specific slider handle width */
+	height: 22px; /* Slider handle height */
+	border-radius: 50%;
+	background: #7AAF42; /* Green background */
+	cursor: pointer; /* Cursor on hover */
+}
+
+#slider::-moz-range-thumb {
+	width: 22px; /* Set a specific slider handle width */
+	height: 22px; /* Slider handle height */
+	border-radius: 50%;
+	background: #7AAF42; /* Green background */
+	cursor: pointer; /* Cursor on hover */
+}
+
+.icon-container {
+	height: 30px;
+}
+
+.icon-container svg {
+	height: 3vh;
+	width: auto;
+	position: absolute;
+}
+
+.hidden {
+	visibility: none;
+}
+
+#all-moving-icons {
+	max-width: 100vw;
+	margin: -12.3% 0;
+}
+
+#south {
+	position: relative;
+    height: 50%;
+}
+
+#north {
+	padding-top: 0.5vh;
+}
+
+#insert-bike-south-here, #insert-ped-south-here {
+	display: flex;
+	flex-direction: row-reverse;
+	margin-right: 16%;
+}
+
+#insert-bike-north-here, #insert-ped-north-here {
+	margin-left: 16%;
+}
+
+#compass {
+	padding-right: 122px;
+	float: right;
+}
+
+#north-arrow {
+	vertical-align: middle;
+	height: 30px;
+	width: auto;
+	padding-right: 10px;
+}
+
+.class {
+	font-weight: bold;
+}
+
+.line {
+	fill: none;
+	stroke-width: 1.5px;
+}
+
+.dot {
+    fill: #7AAF42;
+    stroke: #fff;
+}
+
+#chart-container {
+	display: flex;
+	justify-content: center;
+}
+
+.legend rect {
+  fill:white;
+  stroke:black;
+  opacity:0.8;
+}
+
+.grid line {
+  stroke: lightgrey;
+  stroke-opacity: 0.7;
+  shape-rendering: crispEdges;
+}
+
+
+/*# sourceMappingURL=https://uw-cse442-wi20.github.io/A3-seattle-transportation/styles.08c15487.css.map */

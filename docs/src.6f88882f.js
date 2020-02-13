@@ -117,17 +117,17 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"CSV/Avg-Burke-Data.csv":[function(require,module,exports) {
-module.exports = "/Avg-Burke-Data.d9138ed8.csv";
-},{}],"SVG/ped.svg":[function(require,module,exports) {
-module.exports = "/ped.a4c3996a.svg";
-},{}],"SVG/bike.svg":[function(require,module,exports) {
-module.exports = "/bike.e08844e1.svg";
-},{}],"SVG/ped-reverse.svg":[function(require,module,exports) {
-module.exports = "/ped-reverse.86c1ee32.svg";
-},{}],"SVG/bike-reverse.svg":[function(require,module,exports) {
-module.exports = "/bike-reverse.cc35fa5f.svg";
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/namespaces.js":[function(require,module,exports) {
+})({"BclC":[function(require,module,exports) {
+module.exports = "https://uw-cse442-wi20.github.io/A3-seattle-transportation/Avg-Burke-Data.f8909f41.csv";
+},{}],"USbb":[function(require,module,exports) {
+module.exports = "https://uw-cse442-wi20.github.io/A3-seattle-transportation/ped.266c960d.svg";
+},{}],"mg0Q":[function(require,module,exports) {
+module.exports = "https://uw-cse442-wi20.github.io/A3-seattle-transportation/bike.3c409f33.svg";
+},{}],"CEQB":[function(require,module,exports) {
+module.exports = "https://uw-cse442-wi20.github.io/A3-seattle-transportation/ped-reverse.4ac14ba5.svg";
+},{}],"xOPX":[function(require,module,exports) {
+module.exports = "https://uw-cse442-wi20.github.io/A3-seattle-transportation/bike-reverse.9ce10419.svg";
+},{}],"thS9":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -144,7 +144,7 @@ var _default = {
   xmlns: "http://www.w3.org/2000/xmlns/"
 };
 exports.default = _default;
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/namespace.js":[function(require,module,exports) {
+},{}],"B3U7":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -165,7 +165,7 @@ function _default(name) {
     local: name
   } : name;
 }
-},{"./namespaces":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/namespaces.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/creator.js":[function(require,module,exports) {
+},{"./namespaces":"thS9"}],"I3bi":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -197,7 +197,7 @@ function _default(name) {
   var fullname = (0, _namespace.default)(name);
   return (fullname.local ? creatorFixed : creatorInherit)(fullname);
 }
-},{"./namespace":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/namespace.js","./namespaces":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/namespaces.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/local.js":[function(require,module,exports) {
+},{"./namespace":"B3U7","./namespaces":"thS9"}],"wloj":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -233,7 +233,7 @@ Local.prototype = local.prototype = {
     return this._;
   }
 };
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/matcher.js":[function(require,module,exports) {
+},{}],"v2qx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -263,7 +263,7 @@ if (typeof document !== "undefined") {
 
 var _default = matcher;
 exports.default = _default;
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/on.js":[function(require,module,exports) {
+},{}],"s5ys":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -405,7 +405,7 @@ function customEvent(event1, listener, that, args) {
     exports.event = event = event0;
   }
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/sourceEvent.js":[function(require,module,exports) {
+},{}],"Mi7G":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -423,7 +423,7 @@ function _default() {
 
   return current;
 }
-},{"./selection/on":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/on.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/point.js":[function(require,module,exports) {
+},{"./selection/on":"s5ys"}],"WPzE":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -444,7 +444,7 @@ function _default(node, event) {
   var rect = node.getBoundingClientRect();
   return [event.clientX - rect.left - node.clientLeft, event.clientY - rect.top - node.clientTop];
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/mouse.js":[function(require,module,exports) {
+},{}],"jpAB":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -463,7 +463,7 @@ function _default(node) {
   if (event.changedTouches) event = event.changedTouches[0];
   return (0, _point.default)(node, event);
 }
-},{"./sourceEvent":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/sourceEvent.js","./point":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/point.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selector.js":[function(require,module,exports) {
+},{"./sourceEvent":"Mi7G","./point":"WPzE"}],"PTCf":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -478,7 +478,7 @@ function _default(selector) {
     return this.querySelector(selector);
   };
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/select.js":[function(require,module,exports) {
+},{}],"WUDj":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -506,7 +506,7 @@ function _default(select) {
 
   return new _index.Selection(subgroups, this._parents);
 }
-},{"./index":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/index.js","../selector":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selector.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selectorAll.js":[function(require,module,exports) {
+},{"./index":"z0LH","../selector":"PTCf"}],"V1e5":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -523,7 +523,7 @@ function _default(selector) {
     return this.querySelectorAll(selector);
   };
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/selectAll.js":[function(require,module,exports) {
+},{}],"gilc":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -551,7 +551,7 @@ function _default(select) {
 
   return new _index.Selection(subgroups, parents);
 }
-},{"./index":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/index.js","../selectorAll":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selectorAll.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/filter.js":[function(require,module,exports) {
+},{"./index":"z0LH","../selectorAll":"V1e5"}],"CLKd":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -578,7 +578,7 @@ function _default(match) {
 
   return new _index.Selection(subgroups, this._parents);
 }
-},{"./index":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/index.js","../matcher":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/matcher.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/sparse.js":[function(require,module,exports) {
+},{"./index":"z0LH","../matcher":"v2qx"}],"nxlL":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -589,7 +589,7 @@ exports.default = _default;
 function _default(update) {
   return new Array(update.length);
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/enter.js":[function(require,module,exports) {
+},{}],"ORcx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -631,7 +631,7 @@ EnterNode.prototype = {
     return this._parent.querySelectorAll(selector);
   }
 };
-},{"./sparse":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/sparse.js","./index":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/index.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/constant.js":[function(require,module,exports) {
+},{"./sparse":"nxlL","./index":"z0LH"}],"qqEZ":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -644,7 +644,7 @@ function _default(x) {
     return x;
   };
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/data.js":[function(require,module,exports) {
+},{}],"qawm":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -775,7 +775,7 @@ function _default(value, key) {
   update._exit = exit;
   return update;
 }
-},{"./index":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/index.js","./enter":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/enter.js","../constant":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/constant.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/exit.js":[function(require,module,exports) {
+},{"./index":"z0LH","./enter":"ORcx","../constant":"qqEZ"}],"zdXG":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -792,7 +792,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _default() {
   return new _index.Selection(this._exit || this._groups.map(_sparse.default), this._parents);
 }
-},{"./sparse":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/sparse.js","./index":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/index.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/merge.js":[function(require,module,exports) {
+},{"./sparse":"nxlL","./index":"z0LH"}],"vZ5D":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -817,7 +817,7 @@ function _default(selection) {
 
   return new _index.Selection(merges, this._parents);
 }
-},{"./index":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/index.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/order.js":[function(require,module,exports) {
+},{"./index":"z0LH"}],"pBDL":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -837,7 +837,7 @@ function _default() {
 
   return this;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/sort.js":[function(require,module,exports) {
+},{}],"SLDX":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -870,7 +870,7 @@ function _default(compare) {
 function ascending(a, b) {
   return a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN;
 }
-},{"./index":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/index.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/call.js":[function(require,module,exports) {
+},{"./index":"z0LH"}],"oZwo":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -884,7 +884,7 @@ function _default() {
   callback.apply(null, arguments);
   return this;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/nodes.js":[function(require,module,exports) {
+},{}],"BlUZ":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -900,7 +900,7 @@ function _default() {
   });
   return nodes;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/node.js":[function(require,module,exports) {
+},{}],"Pp3a":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -918,7 +918,7 @@ function _default() {
 
   return null;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/size.js":[function(require,module,exports) {
+},{}],"v8B6":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -933,7 +933,7 @@ function _default() {
   });
   return size;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/empty.js":[function(require,module,exports) {
+},{}],"nynL":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -944,7 +944,7 @@ exports.default = _default;
 function _default() {
   return !this.node();
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/each.js":[function(require,module,exports) {
+},{}],"gnhj":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -961,7 +961,7 @@ function _default(callback) {
 
   return this;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/attr.js":[function(require,module,exports) {
+},{}],"QrSH":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1021,7 +1021,7 @@ function _default(name, value) {
 
   return this.each((value == null ? fullname.local ? attrRemoveNS : attrRemove : typeof value === "function" ? fullname.local ? attrFunctionNS : attrFunction : fullname.local ? attrConstantNS : attrConstant)(fullname, value));
 }
-},{"../namespace":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/namespace.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/window.js":[function(require,module,exports) {
+},{"../namespace":"B3U7"}],"oFK6":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1034,7 +1034,7 @@ function _default(node) {
   node.document && node // node is a Window
   || node.defaultView; // node is a Document
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/style.js":[function(require,module,exports) {
+},{}],"MNmQ":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1069,7 +1069,7 @@ function _default(name, value, priority) {
   var node;
   return arguments.length > 1 ? this.each((value == null ? styleRemove : typeof value === "function" ? styleFunction : styleConstant)(name, value, priority == null ? "" : priority)) : (0, _window.default)(node = this.node()).getComputedStyle(node, null).getPropertyValue(name);
 }
-},{"../window":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/window.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/property.js":[function(require,module,exports) {
+},{"../window":"oFK6"}],"NN3E":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1099,7 +1099,7 @@ function propertyFunction(name, value) {
 function _default(name, value) {
   return arguments.length > 1 ? this.each((value == null ? propertyRemove : typeof value === "function" ? propertyFunction : propertyConstant)(name, value)) : this.node()[name];
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/classed.js":[function(require,module,exports) {
+},{}],"wWhI":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1193,7 +1193,7 @@ function _default(name, value) {
 
   return this.each((typeof value === "function" ? classedFunction : value ? classedTrue : classedFalse)(names, value));
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/text.js":[function(require,module,exports) {
+},{}],"D9qJ":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1221,7 +1221,7 @@ function textFunction(value) {
 function _default(value) {
   return arguments.length ? this.each(value == null ? textRemove : (typeof value === "function" ? textFunction : textConstant)(value)) : this.node().textContent;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/html.js":[function(require,module,exports) {
+},{}],"YKEP":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1249,7 +1249,7 @@ function htmlFunction(value) {
 function _default(value) {
   return arguments.length ? this.each(value == null ? htmlRemove : (typeof value === "function" ? htmlFunction : htmlConstant)(value)) : this.node().innerHTML;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/raise.js":[function(require,module,exports) {
+},{}],"zOJZ":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1264,7 +1264,7 @@ function raise() {
 function _default() {
   return this.each(raise);
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/lower.js":[function(require,module,exports) {
+},{}],"F9oT":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1279,7 +1279,7 @@ function lower() {
 function _default() {
   return this.each(lower);
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/append.js":[function(require,module,exports) {
+},{}],"FXFQ":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1297,7 +1297,7 @@ function _default(name) {
     return this.appendChild(create.apply(this, arguments));
   });
 }
-},{"../creator":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/creator.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/insert.js":[function(require,module,exports) {
+},{"../creator":"I3bi"}],"xDcf":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1322,7 +1322,7 @@ function _default(name, before) {
     return this.insertBefore(create.apply(this, arguments), select.apply(this, arguments) || null);
   });
 }
-},{"../creator":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/creator.js","../selector":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selector.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/remove.js":[function(require,module,exports) {
+},{"../creator":"I3bi","../selector":"PTCf"}],"CU6O":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1338,7 +1338,7 @@ function remove() {
 function _default() {
   return this.each(remove);
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/datum.js":[function(require,module,exports) {
+},{}],"lkoc":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1349,7 +1349,7 @@ exports.default = _default;
 function _default(value) {
   return arguments.length ? this.property("__data__", value) : this.node().__data__;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/dispatch.js":[function(require,module,exports) {
+},{}],"NBxh":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1390,7 +1390,7 @@ function dispatchFunction(type, params) {
 function _default(type, params) {
   return this.each((typeof params === "function" ? dispatchFunction : dispatchConstant)(type, params));
 }
-},{"../window":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/window.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/index.js":[function(require,module,exports) {
+},{"../window":"oFK6"}],"z0LH":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1505,7 +1505,7 @@ Selection.prototype = selection.prototype = {
 };
 var _default = selection;
 exports.default = _default;
-},{"./select":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/select.js","./selectAll":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/selectAll.js","./filter":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/filter.js","./data":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/data.js","./enter":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/enter.js","./exit":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/exit.js","./merge":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/merge.js","./order":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/order.js","./sort":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/sort.js","./call":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/call.js","./nodes":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/nodes.js","./node":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/node.js","./size":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/size.js","./empty":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/empty.js","./each":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/each.js","./attr":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/attr.js","./style":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/style.js","./property":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/property.js","./classed":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/classed.js","./text":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/text.js","./html":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/html.js","./raise":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/raise.js","./lower":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/lower.js","./append":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/append.js","./insert":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/insert.js","./remove":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/remove.js","./datum":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/datum.js","./on":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/on.js","./dispatch":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/dispatch.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/select.js":[function(require,module,exports) {
+},{"./select":"WUDj","./selectAll":"gilc","./filter":"CLKd","./data":"qawm","./enter":"ORcx","./exit":"zdXG","./merge":"vZ5D","./order":"pBDL","./sort":"SLDX","./call":"oZwo","./nodes":"BlUZ","./node":"Pp3a","./size":"v8B6","./empty":"nynL","./each":"gnhj","./attr":"QrSH","./style":"MNmQ","./property":"NN3E","./classed":"wWhI","./text":"D9qJ","./html":"YKEP","./raise":"zOJZ","./lower":"F9oT","./append":"FXFQ","./insert":"xDcf","./remove":"CU6O","./datum":"lkoc","./on":"s5ys","./dispatch":"NBxh"}],"okP8":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1518,7 +1518,7 @@ var _index = require("./selection/index");
 function _default(selector) {
   return typeof selector === "string" ? new _index.Selection([[document.querySelector(selector)]], [document.documentElement]) : new _index.Selection([[selector]], _index.root);
 }
-},{"./selection/index":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/index.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selectAll.js":[function(require,module,exports) {
+},{"./selection/index":"z0LH"}],"gfjn":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1531,7 +1531,7 @@ var _index = require("./selection/index");
 function _default(selector) {
   return typeof selector === "string" ? new _index.Selection([document.querySelectorAll(selector)], [document.documentElement]) : new _index.Selection([selector == null ? [] : selector], _index.root);
 }
-},{"./selection/index":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/index.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/touch.js":[function(require,module,exports) {
+},{"./selection/index":"z0LH"}],"BsoG":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1556,7 +1556,7 @@ function _default(node, touches, identifier) {
 
   return null;
 }
-},{"./sourceEvent":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/sourceEvent.js","./point":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/point.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/src/touches.js":[function(require,module,exports) {
+},{"./sourceEvent":"Mi7G","./point":"WPzE"}],"s9eY":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1579,7 +1579,7 @@ function _default(node, touches) {
 
   return points;
 }
-},{"./sourceEvent":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/sourceEvent.js","./point":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/point.js"}],"../node_modules/d3-svg-legend/node_modules/d3-selection/index.js":[function(require,module,exports) {
+},{"./sourceEvent":"Mi7G","./point":"WPzE"}],"uj6R":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1713,7 +1713,7 @@ var _window = _interopRequireDefault(require("./src/window"));
 var _on = require("./src/selection/on");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./src/creator":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/creator.js","./src/local":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/local.js","./src/matcher":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/matcher.js","./src/mouse":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/mouse.js","./src/namespace":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/namespace.js","./src/namespaces":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/namespaces.js","./src/select":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/select.js","./src/selectAll":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selectAll.js","./src/selection/index":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/index.js","./src/selector":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selector.js","./src/selectorAll":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selectorAll.js","./src/touch":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/touch.js","./src/touches":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/touches.js","./src/window":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/window.js","./src/selection/on":"../node_modules/d3-svg-legend/node_modules/d3-selection/src/selection/on.js"}],"../node_modules/d3-svg-legend/node_modules/d3-format/src/formatDecimal.js":[function(require,module,exports) {
+},{"./src/creator":"I3bi","./src/local":"wloj","./src/matcher":"v2qx","./src/mouse":"jpAB","./src/namespace":"B3U7","./src/namespaces":"thS9","./src/select":"okP8","./src/selectAll":"gfjn","./src/selection/index":"z0LH","./src/selector":"PTCf","./src/selectorAll":"V1e5","./src/touch":"BsoG","./src/touches":"s9eY","./src/window":"oFK6","./src/selection/on":"s5ys"}],"H5wR":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1733,7 +1733,7 @@ function _default(x, p) {
 
   return [coefficient.length > 1 ? coefficient[0] + coefficient.slice(2) : coefficient, +x.slice(i + 1)];
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-format/src/exponent.js":[function(require,module,exports) {
+},{}],"xoCl":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1748,7 +1748,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _default(x) {
   return x = (0, _formatDecimal.default)(Math.abs(x)), x ? x[1] : NaN;
 }
-},{"./formatDecimal":"../node_modules/d3-svg-legend/node_modules/d3-format/src/formatDecimal.js"}],"../node_modules/d3-svg-legend/node_modules/d3-format/src/formatGroup.js":[function(require,module,exports) {
+},{"./formatDecimal":"H5wR"}],"KU3K":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1774,7 +1774,7 @@ function _default(grouping, thousands) {
     return t.reverse().join(thousands);
   };
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-format/src/formatDefault.js":[function(require,module,exports) {
+},{}],"BFKb":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1807,7 +1807,7 @@ function _default(x, p) {
 
   return i0 > 0 ? x.slice(0, i0) + x.slice(i1 + 1) : x;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-format/src/formatPrefixAuto.js":[function(require,module,exports) {
+},{}],"HRrQ":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1832,7 +1832,7 @@ function _default(x, p) {
       n = coefficient.length;
   return i === n ? coefficient : i > n ? coefficient + new Array(i - n + 1).join("0") : i > 0 ? coefficient.slice(0, i) + "." + coefficient.slice(i) : "0." + new Array(1 - i).join("0") + (0, _formatDecimal.default)(x, Math.max(0, p + i - 1))[0]; // less than 1y!
 }
-},{"./formatDecimal":"../node_modules/d3-svg-legend/node_modules/d3-format/src/formatDecimal.js"}],"../node_modules/d3-svg-legend/node_modules/d3-format/src/formatRounded.js":[function(require,module,exports) {
+},{"./formatDecimal":"H5wR"}],"mV2M":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1851,7 +1851,7 @@ function _default(x, p) {
       exponent = d[1];
   return exponent < 0 ? "0." + new Array(-exponent).join("0") + coefficient : coefficient.length > exponent + 1 ? coefficient.slice(0, exponent + 1) + "." + coefficient.slice(exponent + 1) : coefficient + new Array(exponent - coefficient.length + 2).join("0");
 }
-},{"./formatDecimal":"../node_modules/d3-svg-legend/node_modules/d3-format/src/formatDecimal.js"}],"../node_modules/d3-svg-legend/node_modules/d3-format/src/formatTypes.js":[function(require,module,exports) {
+},{"./formatDecimal":"H5wR"}],"Y6lC":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1906,7 +1906,7 @@ var _default = {
   }
 };
 exports.default = _default;
-},{"./formatDefault":"../node_modules/d3-svg-legend/node_modules/d3-format/src/formatDefault.js","./formatPrefixAuto":"../node_modules/d3-svg-legend/node_modules/d3-format/src/formatPrefixAuto.js","./formatRounded":"../node_modules/d3-svg-legend/node_modules/d3-format/src/formatRounded.js"}],"../node_modules/d3-svg-legend/node_modules/d3-format/src/formatSpecifier.js":[function(require,module,exports) {
+},{"./formatDefault":"BFKb","./formatPrefixAuto":"HRrQ","./formatRounded":"mV2M"}],"J4PJ":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1956,7 +1956,7 @@ function FormatSpecifier(specifier) {
 FormatSpecifier.prototype.toString = function () {
   return this.fill + this.align + this.sign + this.symbol + (this.zero ? "0" : "") + (this.width == null ? "" : Math.max(1, this.width | 0)) + (this.comma ? "," : "") + (this.precision == null ? "" : "." + Math.max(0, this.precision | 0)) + this.type;
 };
-},{"./formatTypes":"../node_modules/d3-svg-legend/node_modules/d3-format/src/formatTypes.js"}],"../node_modules/d3-svg-legend/node_modules/d3-format/src/locale.js":[function(require,module,exports) {
+},{"./formatTypes":"Y6lC"}],"e39A":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2106,7 +2106,7 @@ function _default(locale) {
     formatPrefix: formatPrefix
   };
 }
-},{"./exponent":"../node_modules/d3-svg-legend/node_modules/d3-format/src/exponent.js","./formatGroup":"../node_modules/d3-svg-legend/node_modules/d3-format/src/formatGroup.js","./formatSpecifier":"../node_modules/d3-svg-legend/node_modules/d3-format/src/formatSpecifier.js","./formatTypes":"../node_modules/d3-svg-legend/node_modules/d3-format/src/formatTypes.js","./formatPrefixAuto":"../node_modules/d3-svg-legend/node_modules/d3-format/src/formatPrefixAuto.js"}],"../node_modules/d3-svg-legend/node_modules/d3-format/src/defaultLocale.js":[function(require,module,exports) {
+},{"./exponent":"xoCl","./formatGroup":"KU3K","./formatSpecifier":"J4PJ","./formatTypes":"Y6lC","./formatPrefixAuto":"HRrQ"}],"C37P":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2137,7 +2137,7 @@ function defaultLocale(definition) {
   exports.formatPrefix = formatPrefix = locale.formatPrefix;
   return locale;
 }
-},{"./locale":"../node_modules/d3-svg-legend/node_modules/d3-format/src/locale.js"}],"../node_modules/d3-svg-legend/node_modules/d3-format/src/precisionFixed.js":[function(require,module,exports) {
+},{"./locale":"e39A"}],"vfVa":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2152,7 +2152,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _default(step) {
   return Math.max(0, -(0, _exponent.default)(Math.abs(step)));
 }
-},{"./exponent":"../node_modules/d3-svg-legend/node_modules/d3-format/src/exponent.js"}],"../node_modules/d3-svg-legend/node_modules/d3-format/src/precisionPrefix.js":[function(require,module,exports) {
+},{"./exponent":"xoCl"}],"qpnA":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2167,7 +2167,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _default(step, value) {
   return Math.max(0, Math.max(-8, Math.min(8, Math.floor((0, _exponent.default)(value) / 3))) * 3 - (0, _exponent.default)(Math.abs(step)));
 }
-},{"./exponent":"../node_modules/d3-svg-legend/node_modules/d3-format/src/exponent.js"}],"../node_modules/d3-svg-legend/node_modules/d3-format/src/precisionRound.js":[function(require,module,exports) {
+},{"./exponent":"xoCl"}],"fqfA":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2183,7 +2183,7 @@ function _default(step, max) {
   step = Math.abs(step), max = Math.abs(max) - step;
   return Math.max(0, (0, _exponent.default)(max) - (0, _exponent.default)(step)) + 1;
 }
-},{"./exponent":"../node_modules/d3-svg-legend/node_modules/d3-format/src/exponent.js"}],"../node_modules/d3-svg-legend/node_modules/d3-format/index.js":[function(require,module,exports) {
+},{"./exponent":"xoCl"}],"IZVy":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2255,7 +2255,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-},{"./src/defaultLocale":"../node_modules/d3-svg-legend/node_modules/d3-format/src/defaultLocale.js","./src/locale":"../node_modules/d3-svg-legend/node_modules/d3-format/src/locale.js","./src/formatSpecifier":"../node_modules/d3-svg-legend/node_modules/d3-format/src/formatSpecifier.js","./src/precisionFixed":"../node_modules/d3-svg-legend/node_modules/d3-format/src/precisionFixed.js","./src/precisionPrefix":"../node_modules/d3-svg-legend/node_modules/d3-format/src/precisionPrefix.js","./src/precisionRound":"../node_modules/d3-svg-legend/node_modules/d3-format/src/precisionRound.js"}],"../node_modules/d3-svg-legend/node_modules/d3-dispatch/src/dispatch.js":[function(require,module,exports) {
+},{"./src/defaultLocale":"C37P","./src/locale":"e39A","./src/formatSpecifier":"J4PJ","./src/precisionFixed":"vfVa","./src/precisionPrefix":"qpnA","./src/precisionRound":"fqfA"}],"jo3h":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2363,7 +2363,7 @@ function set(type, name, callback) {
 
 var _default = dispatch;
 exports.default = _default;
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-dispatch/index.js":[function(require,module,exports) {
+},{}],"uORS":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2379,7 +2379,7 @@ Object.defineProperty(exports, "dispatch", {
 var _dispatch = _interopRequireDefault(require("./src/dispatch"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./src/dispatch":"../node_modules/d3-svg-legend/node_modules/d3-dispatch/src/dispatch.js"}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/ascending.js":[function(require,module,exports) {
+},{"./src/dispatch":"jo3h"}],"XbRO":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2390,7 +2390,7 @@ exports.default = _default;
 function _default(a, b) {
   return a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/bisector.js":[function(require,module,exports) {
+},{}],"sCqB":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2435,7 +2435,7 @@ function ascendingComparator(f) {
     return (0, _ascending.default)(f(d), x);
   };
 }
-},{"./ascending":"../node_modules/d3-svg-legend/node_modules/d3-array/src/ascending.js"}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/bisect.js":[function(require,module,exports) {
+},{"./ascending":"XbRO"}],"m9Fn":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2456,7 +2456,7 @@ var bisectLeft = ascendingBisect.left;
 exports.bisectLeft = bisectLeft;
 var _default = bisectRight;
 exports.default = _default;
-},{"./ascending":"../node_modules/d3-svg-legend/node_modules/d3-array/src/ascending.js","./bisector":"../node_modules/d3-svg-legend/node_modules/d3-array/src/bisector.js"}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/descending.js":[function(require,module,exports) {
+},{"./ascending":"XbRO","./bisector":"sCqB"}],"uOJz":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2467,7 +2467,7 @@ exports.default = _default;
 function _default(a, b) {
   return b < a ? -1 : b > a ? 1 : b >= a ? 0 : NaN;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/number.js":[function(require,module,exports) {
+},{}],"VRG9":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2478,7 +2478,7 @@ exports.default = _default;
 function _default(x) {
   return x === null ? NaN : +x;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/variance.js":[function(require,module,exports) {
+},{}],"uQDq":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2519,7 +2519,7 @@ function _default(array, f) {
 
   if (j > 1) return s / (j - 1);
 }
-},{"./number":"../node_modules/d3-svg-legend/node_modules/d3-array/src/number.js"}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/deviation.js":[function(require,module,exports) {
+},{"./number":"VRG9"}],"qroI":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2535,7 +2535,7 @@ function _default(array, f) {
   var v = (0, _variance.default)(array, f);
   return v ? Math.sqrt(v) : v;
 }
-},{"./variance":"../node_modules/d3-svg-legend/node_modules/d3-array/src/variance.js"}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/extent.js":[function(require,module,exports) {
+},{"./variance":"uQDq"}],"D7i0":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2574,7 +2574,7 @@ function _default(array, f) {
 
   return [a, c];
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/array.js":[function(require,module,exports) {
+},{}],"xuUI":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2586,20 +2586,7 @@ var slice = array.slice;
 exports.slice = slice;
 var map = array.map;
 exports.map = map;
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/constant.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = _default;
-
-function _default(x) {
-  return function () {
-    return x;
-  };
-}
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/identity.js":[function(require,module,exports) {
+},{}],"u00W":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2610,7 +2597,7 @@ exports.default = _default;
 function _default(x) {
   return x;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/range.js":[function(require,module,exports) {
+},{}],"qMGS":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2630,7 +2617,7 @@ function _default(start, stop, step) {
 
   return range;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/ticks.js":[function(require,module,exports) {
+},{}],"TbJT":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2660,7 +2647,7 @@ function tickStep(start, stop, count) {
   if (error >= e10) step1 *= 10;else if (error >= e5) step1 *= 5;else if (error >= e2) step1 *= 2;
   return stop < start ? -step1 : step1;
 }
-},{"./range":"../node_modules/d3-svg-legend/node_modules/d3-array/src/range.js"}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/threshold/sturges.js":[function(require,module,exports) {
+},{"./range":"qMGS"}],"n6ri":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2671,7 +2658,7 @@ exports.default = _default;
 function _default(values) {
   return Math.ceil(Math.log(values.length) / Math.LN2) + 1;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/histogram.js":[function(require,module,exports) {
+},{}],"tg3f":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2758,7 +2745,7 @@ function _default() {
 
   return histogram;
 }
-},{"./array":"../node_modules/d3-svg-legend/node_modules/d3-array/src/array.js","./bisect":"../node_modules/d3-svg-legend/node_modules/d3-array/src/bisect.js","./constant":"../node_modules/d3-svg-legend/node_modules/d3-array/src/constant.js","./extent":"../node_modules/d3-svg-legend/node_modules/d3-array/src/extent.js","./identity":"../node_modules/d3-svg-legend/node_modules/d3-array/src/identity.js","./ticks":"../node_modules/d3-svg-legend/node_modules/d3-array/src/ticks.js","./threshold/sturges":"../node_modules/d3-svg-legend/node_modules/d3-array/src/threshold/sturges.js"}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/quantile.js":[function(require,module,exports) {
+},{"./array":"xuUI","./bisect":"m9Fn","./constant":"qqEZ","./extent":"D7i0","./identity":"u00W","./ticks":"TbJT","./threshold/sturges":"n6ri"}],"u5jF":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2782,7 +2769,7 @@ function _default(array, p, f) {
       b = +f(array[i + 1], i + 1, array);
   return a + (b - a) * (h - i);
 }
-},{"./number":"../node_modules/d3-svg-legend/node_modules/d3-array/src/number.js"}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/threshold/freedmanDiaconis.js":[function(require,module,exports) {
+},{"./number":"VRG9"}],"lYoi":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2804,7 +2791,7 @@ function _default(values, min, max) {
   values = _array.map.call(values, _number.default).sort(_ascending.default);
   return Math.ceil((max - min) / (2 * ((0, _quantile.default)(values, 0.75) - (0, _quantile.default)(values, 0.25)) * Math.pow(values.length, -1 / 3)));
 }
-},{"../array":"../node_modules/d3-svg-legend/node_modules/d3-array/src/array.js","../ascending":"../node_modules/d3-svg-legend/node_modules/d3-array/src/ascending.js","../number":"../node_modules/d3-svg-legend/node_modules/d3-array/src/number.js","../quantile":"../node_modules/d3-svg-legend/node_modules/d3-array/src/quantile.js"}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/threshold/scott.js":[function(require,module,exports) {
+},{"../array":"xuUI","../ascending":"XbRO","../number":"VRG9","../quantile":"u5jF"}],"xrBT":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2819,7 +2806,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _default(values, min, max) {
   return Math.ceil((max - min) / (3.5 * (0, _deviation.default)(values) * Math.pow(values.length, -1 / 3)));
 }
-},{"../deviation":"../node_modules/d3-svg-legend/node_modules/d3-array/src/deviation.js"}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/max.js":[function(require,module,exports) {
+},{"../deviation":"qroI"}],"uj4D":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2851,7 +2838,7 @@ function _default(array, f) {
 
   return a;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/mean.js":[function(require,module,exports) {
+},{}],"lRxp":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2878,7 +2865,7 @@ function _default(array, f) {
 
   if (j) return s / j;
 }
-},{"./number":"../node_modules/d3-svg-legend/node_modules/d3-array/src/number.js"}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/median.js":[function(require,module,exports) {
+},{"./number":"VRG9"}],"MZS8":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2908,7 +2895,7 @@ function _default(array, f) {
 
   return (0, _quantile.default)(numbers.sort(_ascending.default), 0.5);
 }
-},{"./ascending":"../node_modules/d3-svg-legend/node_modules/d3-array/src/ascending.js","./number":"../node_modules/d3-svg-legend/node_modules/d3-array/src/number.js","./quantile":"../node_modules/d3-svg-legend/node_modules/d3-array/src/quantile.js"}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/merge.js":[function(require,module,exports) {
+},{"./ascending":"XbRO","./number":"VRG9","./quantile":"u5jF"}],"g7em":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2939,7 +2926,7 @@ function _default(arrays) {
 
   return merged;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/min.js":[function(require,module,exports) {
+},{}],"rPbX":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2971,7 +2958,7 @@ function _default(array, f) {
 
   return a;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/pairs.js":[function(require,module,exports) {
+},{}],"vYA7":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2989,7 +2976,7 @@ function _default(array) {
 
   return pairs;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/permute.js":[function(require,module,exports) {
+},{}],"qToj":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3005,7 +2992,7 @@ function _default(array, indexes) {
 
   return permutes;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/scan.js":[function(require,module,exports) {
+},{}],"WKis":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3030,7 +3017,7 @@ function _default(array, compare) {
 
   if (compare(xj, xj) === 0) return j;
 }
-},{"./ascending":"../node_modules/d3-svg-legend/node_modules/d3-array/src/ascending.js"}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/shuffle.js":[function(require,module,exports) {
+},{"./ascending":"XbRO"}],"RsD9":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3052,7 +3039,7 @@ function _default(array, i0, i1) {
 
   return array;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/sum.js":[function(require,module,exports) {
+},{}],"TXR7":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3075,7 +3062,7 @@ function _default(array, f) {
 
   return s;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/transpose.js":[function(require,module,exports) {
+},{}],"udYP":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3102,7 +3089,7 @@ function _default(matrix) {
 function length(d) {
   return d.length;
 }
-},{"./min":"../node_modules/d3-svg-legend/node_modules/d3-array/src/min.js"}],"../node_modules/d3-svg-legend/node_modules/d3-array/src/zip.js":[function(require,module,exports) {
+},{"./min":"rPbX"}],"v2ZI":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3117,7 +3104,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _default() {
   return (0, _transpose.default)(arguments);
 }
-},{"./transpose":"../node_modules/d3-svg-legend/node_modules/d3-array/src/transpose.js"}],"../node_modules/d3-svg-legend/node_modules/d3-array/index.js":[function(require,module,exports) {
+},{"./transpose":"udYP"}],"ufYT":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3355,7 +3342,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-},{"./src/bisect":"../node_modules/d3-svg-legend/node_modules/d3-array/src/bisect.js","./src/ascending":"../node_modules/d3-svg-legend/node_modules/d3-array/src/ascending.js","./src/bisector":"../node_modules/d3-svg-legend/node_modules/d3-array/src/bisector.js","./src/descending":"../node_modules/d3-svg-legend/node_modules/d3-array/src/descending.js","./src/deviation":"../node_modules/d3-svg-legend/node_modules/d3-array/src/deviation.js","./src/extent":"../node_modules/d3-svg-legend/node_modules/d3-array/src/extent.js","./src/histogram":"../node_modules/d3-svg-legend/node_modules/d3-array/src/histogram.js","./src/threshold/freedmanDiaconis":"../node_modules/d3-svg-legend/node_modules/d3-array/src/threshold/freedmanDiaconis.js","./src/threshold/scott":"../node_modules/d3-svg-legend/node_modules/d3-array/src/threshold/scott.js","./src/threshold/sturges":"../node_modules/d3-svg-legend/node_modules/d3-array/src/threshold/sturges.js","./src/max":"../node_modules/d3-svg-legend/node_modules/d3-array/src/max.js","./src/mean":"../node_modules/d3-svg-legend/node_modules/d3-array/src/mean.js","./src/median":"../node_modules/d3-svg-legend/node_modules/d3-array/src/median.js","./src/merge":"../node_modules/d3-svg-legend/node_modules/d3-array/src/merge.js","./src/min":"../node_modules/d3-svg-legend/node_modules/d3-array/src/min.js","./src/pairs":"../node_modules/d3-svg-legend/node_modules/d3-array/src/pairs.js","./src/permute":"../node_modules/d3-svg-legend/node_modules/d3-array/src/permute.js","./src/quantile":"../node_modules/d3-svg-legend/node_modules/d3-array/src/quantile.js","./src/range":"../node_modules/d3-svg-legend/node_modules/d3-array/src/range.js","./src/scan":"../node_modules/d3-svg-legend/node_modules/d3-array/src/scan.js","./src/shuffle":"../node_modules/d3-svg-legend/node_modules/d3-array/src/shuffle.js","./src/sum":"../node_modules/d3-svg-legend/node_modules/d3-array/src/sum.js","./src/ticks":"../node_modules/d3-svg-legend/node_modules/d3-array/src/ticks.js","./src/transpose":"../node_modules/d3-svg-legend/node_modules/d3-array/src/transpose.js","./src/variance":"../node_modules/d3-svg-legend/node_modules/d3-array/src/variance.js","./src/zip":"../node_modules/d3-svg-legend/node_modules/d3-array/src/zip.js"}],"../node_modules/d3-collection/src/map.js":[function(require,module,exports) {
+},{"./src/bisect":"m9Fn","./src/ascending":"XbRO","./src/bisector":"sCqB","./src/descending":"uOJz","./src/deviation":"qroI","./src/extent":"D7i0","./src/histogram":"tg3f","./src/threshold/freedmanDiaconis":"lYoi","./src/threshold/scott":"xrBT","./src/threshold/sturges":"n6ri","./src/max":"uj4D","./src/mean":"lRxp","./src/median":"MZS8","./src/merge":"g7em","./src/min":"rPbX","./src/pairs":"vYA7","./src/permute":"qToj","./src/quantile":"u5jF","./src/range":"qMGS","./src/scan":"WKis","./src/shuffle":"RsD9","./src/sum":"TXR7","./src/ticks":"TbJT","./src/transpose":"udYP","./src/variance":"uQDq","./src/zip":"v2ZI"}],"lDuF":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3445,7 +3432,7 @@ function map(object, f) {
 
 var _default = map;
 exports.default = _default;
-},{}],"../node_modules/d3-collection/src/nest.js":[function(require,module,exports) {
+},{}],"kDkA":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3552,7 +3539,7 @@ function createMap() {
 function setMap(map, key, value) {
   map.set(key, value);
 }
-},{"./map":"../node_modules/d3-collection/src/map.js"}],"../node_modules/d3-collection/src/set.js":[function(require,module,exports) {
+},{"./map":"lDuF"}],"vFPv":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3601,7 +3588,7 @@ function set(object, f) {
 
 var _default = set;
 exports.default = _default;
-},{"./map":"../node_modules/d3-collection/src/map.js"}],"../node_modules/d3-collection/src/keys.js":[function(require,module,exports) {
+},{"./map":"lDuF"}],"DTc5":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3616,7 +3603,7 @@ function _default(map) {
 
   return keys;
 }
-},{}],"../node_modules/d3-collection/src/values.js":[function(require,module,exports) {
+},{}],"KaQc":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3631,7 +3618,7 @@ function _default(map) {
 
   return values;
 }
-},{}],"../node_modules/d3-collection/src/entries.js":[function(require,module,exports) {
+},{}],"wnH6":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3649,7 +3636,7 @@ function _default(map) {
 
   return entries;
 }
-},{}],"../node_modules/d3-collection/src/index.js":[function(require,module,exports) {
+},{}],"S3hn":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3705,7 +3692,7 @@ var _values = _interopRequireDefault(require("./values"));
 var _entries = _interopRequireDefault(require("./entries"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./nest":"../node_modules/d3-collection/src/nest.js","./set":"../node_modules/d3-collection/src/set.js","./map":"../node_modules/d3-collection/src/map.js","./keys":"../node_modules/d3-collection/src/keys.js","./values":"../node_modules/d3-collection/src/values.js","./entries":"../node_modules/d3-collection/src/entries.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/array.js":[function(require,module,exports) {
+},{"./nest":"kDkA","./set":"vFPv","./map":"lDuF","./keys":"DTc5","./values":"KaQc","./entries":"wnH6"}],"rSHl":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3717,7 +3704,7 @@ var map = array.map;
 exports.map = map;
 var slice = array.slice;
 exports.slice = slice;
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/ordinal.js":[function(require,module,exports) {
+},{}],"wtaT":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3780,7 +3767,7 @@ function ordinal(range) {
 
   return scale;
 }
-},{"d3-collection":"../node_modules/d3-collection/src/index.js","./array":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/array.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/band.js":[function(require,module,exports) {
+},{"d3-collection":"S3hn","./array":"rSHl"}],"a34d":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3887,7 +3874,7 @@ function pointish(scale) {
 function point() {
   return pointish(band().paddingInner(1));
 }
-},{"d3-array":"../node_modules/d3-svg-legend/node_modules/d3-array/index.js","./ordinal":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/ordinal.js"}],"../node_modules/d3-color/src/define.js":[function(require,module,exports) {
+},{"d3-array":"ufYT","./ordinal":"wtaT"}],"fV2I":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3908,7 +3895,7 @@ function extend(parent, definition) {
 
   return prototype;
 }
-},{}],"../node_modules/d3-color/src/color.js":[function(require,module,exports) {
+},{}],"LIaf":[function(require,module,exports) {
 
 "use strict";
 
@@ -4278,7 +4265,7 @@ function Hsl(h, s, l, opacity) {
 function hsl2rgb(h, m1, m2) {
   return (h < 60 ? m1 + (m2 - m1) * h / 60 : h < 180 ? m2 : h < 240 ? m1 + (m2 - m1) * (240 - h) / 60 : m1) * 255;
 }
-},{"./define.js":"../node_modules/d3-color/src/define.js"}],"../node_modules/d3-color/src/math.js":[function(require,module,exports) {
+},{"./define.js":"fV2I"}],"XzID":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4289,7 +4276,7 @@ var deg2rad = Math.PI / 180;
 exports.deg2rad = deg2rad;
 var rad2deg = 180 / Math.PI;
 exports.rad2deg = rad2deg;
-},{}],"../node_modules/d3-color/src/lab.js":[function(require,module,exports) {
+},{}],"f7Av":[function(require,module,exports) {
 
 "use strict";
 
@@ -4431,7 +4418,7 @@ function hcl2lab(o) {
     return hcl2lab(this).rgb();
   }
 }));
-},{"./define.js":"../node_modules/d3-color/src/define.js","./color.js":"../node_modules/d3-color/src/color.js","./math.js":"../node_modules/d3-color/src/math.js"}],"../node_modules/d3-color/src/cubehelix.js":[function(require,module,exports) {
+},{"./define.js":"fV2I","./color.js":"LIaf","./math.js":"XzID"}],"CMX9":[function(require,module,exports) {
 
 "use strict";
 
@@ -4504,7 +4491,7 @@ function Cubehelix(h, s, l, opacity) {
     return new _color.Rgb(255 * (l + a * (A * cosh + B * sinh)), 255 * (l + a * (C * cosh + D * sinh)), 255 * (l + a * (E * cosh)), this.opacity);
   }
 }));
-},{"./define.js":"../node_modules/d3-color/src/define.js","./color.js":"../node_modules/d3-color/src/color.js","./math.js":"../node_modules/d3-color/src/math.js"}],"../node_modules/d3-color/src/index.js":[function(require,module,exports) {
+},{"./define.js":"fV2I","./color.js":"LIaf","./math.js":"XzID"}],"Peej":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4570,7 +4557,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-},{"./color.js":"../node_modules/d3-color/src/color.js","./lab.js":"../node_modules/d3-color/src/lab.js","./cubehelix.js":"../node_modules/d3-color/src/cubehelix.js"}],"../node_modules/d3-interpolate/src/basis.js":[function(require,module,exports) {
+},{"./color.js":"LIaf","./lab.js":"f7Av","./cubehelix.js":"CMX9"}],"ElXH":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4596,7 +4583,7 @@ function _default(values) {
     return basis((t - i / n) * n, v0, v1, v2, v3);
   };
 }
-},{}],"../node_modules/d3-interpolate/src/basisClosed.js":[function(require,module,exports) {
+},{}],"hnXz":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4617,20 +4604,7 @@ function _default(values) {
     return (0, _basis.basis)((t - i / n) * n, v0, v1, v2, v3);
   };
 }
-},{"./basis.js":"../node_modules/d3-interpolate/src/basis.js"}],"../node_modules/d3-interpolate/src/constant.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = _default;
-
-function _default(x) {
-  return function () {
-    return x;
-  };
-}
-},{}],"../node_modules/d3-interpolate/src/color.js":[function(require,module,exports) {
+},{"./basis.js":"ElXH"}],"RhzI":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4671,7 +4645,7 @@ function nogamma(a, b) {
   var d = b - a;
   return d ? linear(a, d) : (0, _constant.default)(isNaN(a) ? b : a);
 }
-},{"./constant.js":"../node_modules/d3-interpolate/src/constant.js"}],"../node_modules/d3-interpolate/src/rgb.js":[function(require,module,exports) {
+},{"./constant.js":"qqEZ"}],"rvVK":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4749,7 +4723,7 @@ var rgbBasis = rgbSpline(_basis.default);
 exports.rgbBasis = rgbBasis;
 var rgbBasisClosed = rgbSpline(_basisClosed.default);
 exports.rgbBasisClosed = rgbBasisClosed;
-},{"d3-color":"../node_modules/d3-color/src/index.js","./basis.js":"../node_modules/d3-interpolate/src/basis.js","./basisClosed.js":"../node_modules/d3-interpolate/src/basisClosed.js","./color.js":"../node_modules/d3-interpolate/src/color.js"}],"../node_modules/d3-interpolate/src/numberArray.js":[function(require,module,exports) {
+},{"d3-color":"Peej","./basis.js":"ElXH","./basisClosed.js":"hnXz","./color.js":"RhzI"}],"BOJ5":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4773,7 +4747,7 @@ function _default(a, b) {
 function isNumberArray(x) {
   return ArrayBuffer.isView(x) && !(x instanceof DataView);
 }
-},{}],"../node_modules/d3-interpolate/src/array.js":[function(require,module,exports) {
+},{}],"TYZM":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4813,7 +4787,7 @@ function genericArray(a, b) {
     return c;
   };
 }
-},{"./value.js":"../node_modules/d3-interpolate/src/value.js","./numberArray.js":"../node_modules/d3-interpolate/src/numberArray.js"}],"../node_modules/d3-interpolate/src/date.js":[function(require,module,exports) {
+},{"./value.js":"gzcD","./numberArray.js":"BOJ5"}],"jEDF":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4827,7 +4801,7 @@ function _default(a, b) {
     return d.setTime(a * (1 - t) + b * t), d;
   };
 }
-},{}],"../node_modules/d3-interpolate/src/number.js":[function(require,module,exports) {
+},{}],"YNf8":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4840,7 +4814,7 @@ function _default(a, b) {
     return a * (1 - t) + b * t;
   };
 }
-},{}],"../node_modules/d3-interpolate/src/object.js":[function(require,module,exports) {
+},{}],"iJdZ":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4873,7 +4847,7 @@ function _default(a, b) {
     return c;
   };
 }
-},{"./value.js":"../node_modules/d3-interpolate/src/value.js"}],"../node_modules/d3-interpolate/src/string.js":[function(require,module,exports) {
+},{"./value.js":"gzcD"}],"nK0E":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4957,7 +4931,7 @@ function _default(a, b) {
     return s.join("");
   });
 }
-},{"./number.js":"../node_modules/d3-interpolate/src/number.js"}],"../node_modules/d3-interpolate/src/value.js":[function(require,module,exports) {
+},{"./number.js":"YNf8"}],"gzcD":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4994,7 +4968,7 @@ function _default(a, b) {
       c;
   return b == null || t === "boolean" ? (0, _constant.default)(b) : (t === "number" ? _number.default : t === "string" ? (c = (0, _d3Color.color)(b)) ? (b = c, _rgb.default) : _string.default : b instanceof _d3Color.color ? _rgb.default : b instanceof Date ? _date.default : (0, _numberArray.isNumberArray)(b) ? _numberArray.default : Array.isArray(b) ? _array.genericArray : typeof b.valueOf !== "function" && typeof b.toString !== "function" || isNaN(b) ? _object.default : _number.default)(a, b);
 }
-},{"d3-color":"../node_modules/d3-color/src/index.js","./rgb.js":"../node_modules/d3-interpolate/src/rgb.js","./array.js":"../node_modules/d3-interpolate/src/array.js","./date.js":"../node_modules/d3-interpolate/src/date.js","./number.js":"../node_modules/d3-interpolate/src/number.js","./object.js":"../node_modules/d3-interpolate/src/object.js","./string.js":"../node_modules/d3-interpolate/src/string.js","./constant.js":"../node_modules/d3-interpolate/src/constant.js","./numberArray.js":"../node_modules/d3-interpolate/src/numberArray.js"}],"../node_modules/d3-interpolate/src/discrete.js":[function(require,module,exports) {
+},{"d3-color":"Peej","./rgb.js":"rvVK","./array.js":"TYZM","./date.js":"jEDF","./number.js":"YNf8","./object.js":"iJdZ","./string.js":"nK0E","./constant.js":"qqEZ","./numberArray.js":"BOJ5"}],"B1w8":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5008,7 +4982,7 @@ function _default(range) {
     return range[Math.max(0, Math.min(n - 1, Math.floor(t * n)))];
   };
 }
-},{}],"../node_modules/d3-interpolate/src/hue.js":[function(require,module,exports) {
+},{}],"ZrPS":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5025,7 +4999,7 @@ function _default(a, b) {
     return x - 360 * Math.floor(x / 360);
   };
 }
-},{"./color.js":"../node_modules/d3-interpolate/src/color.js"}],"../node_modules/d3-interpolate/src/round.js":[function(require,module,exports) {
+},{"./color.js":"RhzI"}],"nXvs":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5038,7 +5012,7 @@ function _default(a, b) {
     return Math.round(a * (1 - t) + b * t);
   };
 }
-},{}],"../node_modules/d3-interpolate/src/transform/decompose.js":[function(require,module,exports) {
+},{}],"UXwK":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5072,7 +5046,7 @@ function _default(a, b, c, d, e, f) {
     scaleY: scaleY
   };
 }
-},{}],"../node_modules/d3-interpolate/src/transform/parse.js":[function(require,module,exports) {
+},{}],"LVjk":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5107,7 +5081,7 @@ function parseSvg(value) {
   value = value.matrix;
   return (0, _decompose.default)(value.a, value.b, value.c, value.d, value.e, value.f);
 }
-},{"./decompose.js":"../node_modules/d3-interpolate/src/transform/decompose.js"}],"../node_modules/d3-interpolate/src/transform/index.js":[function(require,module,exports) {
+},{"./decompose.js":"UXwK"}],"v4Xl":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5208,7 +5182,7 @@ var interpolateTransformCss = interpolateTransform(_parse.parseCss, "px, ", "px)
 exports.interpolateTransformCss = interpolateTransformCss;
 var interpolateTransformSvg = interpolateTransform(_parse.parseSvg, ", ", ")", ")");
 exports.interpolateTransformSvg = interpolateTransformSvg;
-},{"../number.js":"../node_modules/d3-interpolate/src/number.js","./parse.js":"../node_modules/d3-interpolate/src/transform/parse.js"}],"../node_modules/d3-interpolate/src/zoom.js":[function(require,module,exports) {
+},{"../number.js":"YNf8","./parse.js":"LVjk"}],"jU1v":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5273,7 +5247,7 @@ function _default(p0, p1) {
   i.duration = S * 1000;
   return i;
 }
-},{}],"../node_modules/d3-interpolate/src/hsl.js":[function(require,module,exports) {
+},{}],"LdeI":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5310,7 +5284,7 @@ var _default = hsl(_color.hue);
 exports.default = _default;
 var hslLong = hsl(_color.default);
 exports.hslLong = hslLong;
-},{"d3-color":"../node_modules/d3-color/src/index.js","./color.js":"../node_modules/d3-interpolate/src/color.js"}],"../node_modules/d3-interpolate/src/lab.js":[function(require,module,exports) {
+},{"d3-color":"Peej","./color.js":"RhzI"}],"rghB":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5337,7 +5311,7 @@ function lab(start, end) {
     return start + "";
   };
 }
-},{"d3-color":"../node_modules/d3-color/src/index.js","./color.js":"../node_modules/d3-interpolate/src/color.js"}],"../node_modules/d3-interpolate/src/hcl.js":[function(require,module,exports) {
+},{"d3-color":"Peej","./color.js":"RhzI"}],"dxPN":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5374,7 +5348,7 @@ var _default = hcl(_color.hue);
 exports.default = _default;
 var hclLong = hcl(_color.default);
 exports.hclLong = hclLong;
-},{"d3-color":"../node_modules/d3-color/src/index.js","./color.js":"../node_modules/d3-interpolate/src/color.js"}],"../node_modules/d3-interpolate/src/cubehelix.js":[function(require,module,exports) {
+},{"d3-color":"Peej","./color.js":"RhzI"}],"X3VV":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5418,7 +5392,7 @@ var _default = cubehelix(_color.hue);
 exports.default = _default;
 var cubehelixLong = cubehelix(_color.default);
 exports.cubehelixLong = cubehelixLong;
-},{"d3-color":"../node_modules/d3-color/src/index.js","./color.js":"../node_modules/d3-interpolate/src/color.js"}],"../node_modules/d3-interpolate/src/piecewise.js":[function(require,module,exports) {
+},{"d3-color":"Peej","./color.js":"RhzI"}],"xtkP":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5439,7 +5413,7 @@ function piecewise(interpolate, values) {
     return I[i](t - i);
   };
 }
-},{}],"../node_modules/d3-interpolate/src/quantize.js":[function(require,module,exports) {
+},{}],"Oe1t":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5454,7 +5428,7 @@ function _default(interpolator, n) {
 
   return samples;
 }
-},{}],"../node_modules/d3-interpolate/src/index.js":[function(require,module,exports) {
+},{}],"k9aH":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5670,20 +5644,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./value.js":"../node_modules/d3-interpolate/src/value.js","./array.js":"../node_modules/d3-interpolate/src/array.js","./basis.js":"../node_modules/d3-interpolate/src/basis.js","./basisClosed.js":"../node_modules/d3-interpolate/src/basisClosed.js","./date.js":"../node_modules/d3-interpolate/src/date.js","./discrete.js":"../node_modules/d3-interpolate/src/discrete.js","./hue.js":"../node_modules/d3-interpolate/src/hue.js","./number.js":"../node_modules/d3-interpolate/src/number.js","./numberArray.js":"../node_modules/d3-interpolate/src/numberArray.js","./object.js":"../node_modules/d3-interpolate/src/object.js","./round.js":"../node_modules/d3-interpolate/src/round.js","./string.js":"../node_modules/d3-interpolate/src/string.js","./transform/index.js":"../node_modules/d3-interpolate/src/transform/index.js","./zoom.js":"../node_modules/d3-interpolate/src/zoom.js","./rgb.js":"../node_modules/d3-interpolate/src/rgb.js","./hsl.js":"../node_modules/d3-interpolate/src/hsl.js","./lab.js":"../node_modules/d3-interpolate/src/lab.js","./hcl.js":"../node_modules/d3-interpolate/src/hcl.js","./cubehelix.js":"../node_modules/d3-interpolate/src/cubehelix.js","./piecewise.js":"../node_modules/d3-interpolate/src/piecewise.js","./quantize.js":"../node_modules/d3-interpolate/src/quantize.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/constant.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = _default;
-
-function _default(x) {
-  return function () {
-    return x;
-  };
-}
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/number.js":[function(require,module,exports) {
+},{"./value.js":"gzcD","./array.js":"TYZM","./basis.js":"ElXH","./basisClosed.js":"hnXz","./date.js":"jEDF","./discrete.js":"B1w8","./hue.js":"ZrPS","./number.js":"YNf8","./numberArray.js":"BOJ5","./object.js":"iJdZ","./round.js":"nXvs","./string.js":"nK0E","./transform/index.js":"v4Xl","./zoom.js":"jU1v","./rgb.js":"rvVK","./hsl.js":"LdeI","./lab.js":"rghB","./hcl.js":"dxPN","./cubehelix.js":"X3VV","./piecewise.js":"xtkP","./quantize.js":"Oe1t"}],"dIx5":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5694,7 +5655,7 @@ exports.default = _default;
 function _default(x) {
   return +x;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/continuous.js":[function(require,module,exports) {
+},{}],"gEXa":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5826,7 +5787,7 @@ function continuous(deinterpolate, reinterpolate) {
 
   return rescale();
 }
-},{"d3-array":"../node_modules/d3-svg-legend/node_modules/d3-array/index.js","d3-interpolate":"../node_modules/d3-interpolate/src/index.js","./array":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/array.js","./constant":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/constant.js","./number":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/number.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/tickFormat.js":[function(require,module,exports) {
+},{"d3-array":"ufYT","d3-interpolate":"k9aH","./array":"rSHl","./constant":"qqEZ","./number":"dIx5"}],"vUTJ":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5873,7 +5834,7 @@ function _default(domain, count, specifier) {
 
   return (0, _d3Format.format)(specifier);
 }
-},{"d3-array":"../node_modules/d3-svg-legend/node_modules/d3-array/index.js","d3-format":"../node_modules/d3-svg-legend/node_modules/d3-format/index.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/linear.js":[function(require,module,exports) {
+},{"d3-array":"ufYT","d3-format":"IZVy"}],"TWdB":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5938,7 +5899,7 @@ function linear() {
 
   return linearish(scale);
 }
-},{"d3-array":"../node_modules/d3-svg-legend/node_modules/d3-array/index.js","d3-interpolate":"../node_modules/d3-interpolate/src/index.js","./continuous":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/continuous.js","./tickFormat":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/tickFormat.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/identity.js":[function(require,module,exports) {
+},{"d3-array":"ufYT","d3-interpolate":"k9aH","./continuous":"gEXa","./tickFormat":"vUTJ"}],"NFOW":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5973,7 +5934,7 @@ function identity() {
 
   return (0, _linear.linearish)(scale);
 }
-},{"./array":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/array.js","./linear":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/linear.js","./number":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/number.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/nice.js":[function(require,module,exports) {
+},{"./array":"rSHl","./linear":"TWdB","./number":"dIx5"}],"CBa7":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5998,7 +5959,7 @@ function _default(domain, interval) {
   domain[i1] = interval.ceil(x1);
   return domain;
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/log.js":[function(require,module,exports) {
+},{}],"tDTM":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6148,7 +6109,7 @@ function log() {
 
   return scale;
 }
-},{"d3-array":"../node_modules/d3-svg-legend/node_modules/d3-array/index.js","d3-format":"../node_modules/d3-svg-legend/node_modules/d3-format/index.js","./constant":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/constant.js","./nice":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/nice.js","./continuous":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/continuous.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/pow.js":[function(require,module,exports) {
+},{"d3-array":"ufYT","d3-format":"IZVy","./constant":"qqEZ","./nice":"CBa7","./continuous":"gEXa"}],"CKPq":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6205,7 +6166,7 @@ function pow() {
 function sqrt() {
   return pow().exponent(0.5);
 }
-},{"./constant":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/constant.js","./linear":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/linear.js","./continuous":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/continuous.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/quantile.js":[function(require,module,exports) {
+},{"./constant":"qqEZ","./linear":"TWdB","./continuous":"gEXa"}],"frrW":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6265,7 +6226,7 @@ function quantile() {
 
   return scale;
 }
-},{"d3-array":"../node_modules/d3-svg-legend/node_modules/d3-array/index.js","./array":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/array.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/quantize.js":[function(require,module,exports) {
+},{"d3-array":"ufYT","./array":"rSHl"}],"YpW9":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6318,7 +6279,7 @@ function quantize() {
 
   return (0, _linear.linearish)(scale);
 }
-},{"d3-array":"../node_modules/d3-svg-legend/node_modules/d3-array/index.js","./array":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/array.js","./linear":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/linear.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/threshold.js":[function(require,module,exports) {
+},{"d3-array":"ufYT","./array":"rSHl","./linear":"TWdB"}],"bC2j":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6358,7 +6319,7 @@ function threshold() {
 
   return scale;
 }
-},{"d3-array":"../node_modules/d3-svg-legend/node_modules/d3-array/index.js","./array":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/array.js"}],"../node_modules/d3-time/src/interval.js":[function(require,module,exports) {
+},{"d3-array":"ufYT","./array":"rSHl"}],"QFUQ":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6438,7 +6399,7 @@ function newInterval(floori, offseti, count, field) {
 
   return interval;
 }
-},{}],"../node_modules/d3-time/src/millisecond.js":[function(require,module,exports) {
+},{}],"WVmH":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6474,7 +6435,7 @@ var _default = millisecond;
 exports.default = _default;
 var milliseconds = millisecond.range;
 exports.milliseconds = milliseconds;
-},{"./interval.js":"../node_modules/d3-time/src/interval.js"}],"../node_modules/d3-time/src/duration.js":[function(require,module,exports) {
+},{"./interval.js":"QFUQ"}],"Vnta":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6491,7 +6452,7 @@ var durationDay = 864e5;
 exports.durationDay = durationDay;
 var durationWeek = 6048e5;
 exports.durationWeek = durationWeek;
-},{}],"../node_modules/d3-time/src/second.js":[function(require,module,exports) {
+},{}],"AYLw":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6518,7 +6479,7 @@ var _default = second;
 exports.default = _default;
 var seconds = second.range;
 exports.seconds = seconds;
-},{"./interval.js":"../node_modules/d3-time/src/interval.js","./duration.js":"../node_modules/d3-time/src/duration.js"}],"../node_modules/d3-time/src/minute.js":[function(require,module,exports) {
+},{"./interval.js":"QFUQ","./duration.js":"Vnta"}],"etD9":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6545,7 +6506,7 @@ var _default = minute;
 exports.default = _default;
 var minutes = minute.range;
 exports.minutes = minutes;
-},{"./interval.js":"../node_modules/d3-time/src/interval.js","./duration.js":"../node_modules/d3-time/src/duration.js"}],"../node_modules/d3-time/src/hour.js":[function(require,module,exports) {
+},{"./interval.js":"QFUQ","./duration.js":"Vnta"}],"py4n":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6572,7 +6533,7 @@ var _default = hour;
 exports.default = _default;
 var hours = hour.range;
 exports.hours = hours;
-},{"./interval.js":"../node_modules/d3-time/src/interval.js","./duration.js":"../node_modules/d3-time/src/duration.js"}],"../node_modules/d3-time/src/day.js":[function(require,module,exports) {
+},{"./interval.js":"QFUQ","./duration.js":"Vnta"}],"LWrz":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6599,7 +6560,7 @@ var _default = day;
 exports.default = _default;
 var days = day.range;
 exports.days = days;
-},{"./interval.js":"../node_modules/d3-time/src/interval.js","./duration.js":"../node_modules/d3-time/src/duration.js"}],"../node_modules/d3-time/src/week.js":[function(require,module,exports) {
+},{"./interval.js":"QFUQ","./duration.js":"Vnta"}],"Dweu":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6652,7 +6613,7 @@ var fridays = friday.range;
 exports.fridays = fridays;
 var saturdays = saturday.range;
 exports.saturdays = saturdays;
-},{"./interval.js":"../node_modules/d3-time/src/interval.js","./duration.js":"../node_modules/d3-time/src/duration.js"}],"../node_modules/d3-time/src/month.js":[function(require,module,exports) {
+},{"./interval.js":"QFUQ","./duration.js":"Vnta"}],"gOAO":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6678,7 +6639,7 @@ var _default = month;
 exports.default = _default;
 var months = month.range;
 exports.months = months;
-},{"./interval.js":"../node_modules/d3-time/src/interval.js"}],"../node_modules/d3-time/src/year.js":[function(require,module,exports) {
+},{"./interval.js":"QFUQ"}],"kReM":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6715,7 +6676,7 @@ var _default = year;
 exports.default = _default;
 var years = year.range;
 exports.years = years;
-},{"./interval.js":"../node_modules/d3-time/src/interval.js"}],"../node_modules/d3-time/src/utcMinute.js":[function(require,module,exports) {
+},{"./interval.js":"QFUQ"}],"O6lW":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6742,7 +6703,7 @@ var _default = utcMinute;
 exports.default = _default;
 var utcMinutes = utcMinute.range;
 exports.utcMinutes = utcMinutes;
-},{"./interval.js":"../node_modules/d3-time/src/interval.js","./duration.js":"../node_modules/d3-time/src/duration.js"}],"../node_modules/d3-time/src/utcHour.js":[function(require,module,exports) {
+},{"./interval.js":"QFUQ","./duration.js":"Vnta"}],"qnVA":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6769,7 +6730,7 @@ var _default = utcHour;
 exports.default = _default;
 var utcHours = utcHour.range;
 exports.utcHours = utcHours;
-},{"./interval.js":"../node_modules/d3-time/src/interval.js","./duration.js":"../node_modules/d3-time/src/duration.js"}],"../node_modules/d3-time/src/utcDay.js":[function(require,module,exports) {
+},{"./interval.js":"QFUQ","./duration.js":"Vnta"}],"HXiV":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6796,7 +6757,7 @@ var _default = utcDay;
 exports.default = _default;
 var utcDays = utcDay.range;
 exports.utcDays = utcDays;
-},{"./interval.js":"../node_modules/d3-time/src/interval.js","./duration.js":"../node_modules/d3-time/src/duration.js"}],"../node_modules/d3-time/src/utcWeek.js":[function(require,module,exports) {
+},{"./interval.js":"QFUQ","./duration.js":"Vnta"}],"CRXo":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6849,7 +6810,7 @@ var utcFridays = utcFriday.range;
 exports.utcFridays = utcFridays;
 var utcSaturdays = utcSaturday.range;
 exports.utcSaturdays = utcSaturdays;
-},{"./interval.js":"../node_modules/d3-time/src/interval.js","./duration.js":"../node_modules/d3-time/src/duration.js"}],"../node_modules/d3-time/src/utcMonth.js":[function(require,module,exports) {
+},{"./interval.js":"QFUQ","./duration.js":"Vnta"}],"EphR":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6875,7 +6836,7 @@ var _default = utcMonth;
 exports.default = _default;
 var utcMonths = utcMonth.range;
 exports.utcMonths = utcMonths;
-},{"./interval.js":"../node_modules/d3-time/src/interval.js"}],"../node_modules/d3-time/src/utcYear.js":[function(require,module,exports) {
+},{"./interval.js":"QFUQ"}],"Abfv":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6912,7 +6873,7 @@ var _default = utcYear;
 exports.default = _default;
 var utcYears = utcYear.range;
 exports.utcYears = utcYears;
-},{"./interval.js":"../node_modules/d3-time/src/interval.js"}],"../node_modules/d3-time/src/index.js":[function(require,module,exports) {
+},{"./interval.js":"QFUQ"}],"hQYG":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -7320,7 +7281,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./interval.js":"../node_modules/d3-time/src/interval.js","./millisecond.js":"../node_modules/d3-time/src/millisecond.js","./second.js":"../node_modules/d3-time/src/second.js","./minute.js":"../node_modules/d3-time/src/minute.js","./hour.js":"../node_modules/d3-time/src/hour.js","./day.js":"../node_modules/d3-time/src/day.js","./week.js":"../node_modules/d3-time/src/week.js","./month.js":"../node_modules/d3-time/src/month.js","./year.js":"../node_modules/d3-time/src/year.js","./utcMinute.js":"../node_modules/d3-time/src/utcMinute.js","./utcHour.js":"../node_modules/d3-time/src/utcHour.js","./utcDay.js":"../node_modules/d3-time/src/utcDay.js","./utcWeek.js":"../node_modules/d3-time/src/utcWeek.js","./utcMonth.js":"../node_modules/d3-time/src/utcMonth.js","./utcYear.js":"../node_modules/d3-time/src/utcYear.js"}],"../node_modules/d3-time-format/src/locale.js":[function(require,module,exports) {
+},{"./interval.js":"QFUQ","./millisecond.js":"WVmH","./second.js":"AYLw","./minute.js":"etD9","./hour.js":"py4n","./day.js":"LWrz","./week.js":"Dweu","./month.js":"gOAO","./year.js":"kReM","./utcMinute.js":"O6lW","./utcHour.js":"qnVA","./utcDay.js":"HXiV","./utcWeek.js":"CRXo","./utcMonth.js":"EphR","./utcYear.js":"Abfv"}],"UbHU":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8004,7 +7965,7 @@ function formatUnixTimestamp(d) {
 function formatUnixTimestampSeconds(d) {
   return Math.floor(+d / 1000);
 }
-},{"d3-time":"../node_modules/d3-time/src/index.js"}],"../node_modules/d3-time-format/src/defaultLocale.js":[function(require,module,exports) {
+},{"d3-time":"hQYG"}],"csjH":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8045,7 +8006,7 @@ function defaultLocale(definition) {
   exports.utcParse = utcParse = locale.utcParse;
   return locale;
 }
-},{"./locale.js":"../node_modules/d3-time-format/src/locale.js"}],"../node_modules/d3-time-format/src/isoFormat.js":[function(require,module,exports) {
+},{"./locale.js":"UbHU"}],"PKKZ":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8065,7 +8026,7 @@ function formatIsoNative(date) {
 var formatIso = Date.prototype.toISOString ? formatIsoNative : (0, _defaultLocale.utcFormat)(isoSpecifier);
 var _default = formatIso;
 exports.default = _default;
-},{"./defaultLocale.js":"../node_modules/d3-time-format/src/defaultLocale.js"}],"../node_modules/d3-time-format/src/isoParse.js":[function(require,module,exports) {
+},{"./defaultLocale.js":"csjH"}],"d4jk":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8085,7 +8046,7 @@ function parseIsoNative(string) {
 var parseIso = +new Date("2000-01-01T00:00:00.000Z") ? parseIsoNative : (0, _defaultLocale.utcParse)(_isoFormat.isoSpecifier);
 var _default = parseIso;
 exports.default = _default;
-},{"./isoFormat.js":"../node_modules/d3-time-format/src/isoFormat.js","./defaultLocale.js":"../node_modules/d3-time-format/src/defaultLocale.js"}],"../node_modules/d3-time-format/src/index.js":[function(require,module,exports) {
+},{"./isoFormat.js":"PKKZ","./defaultLocale.js":"csjH"}],"UYpZ":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8153,7 +8114,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-},{"./defaultLocale.js":"../node_modules/d3-time-format/src/defaultLocale.js","./locale.js":"../node_modules/d3-time-format/src/locale.js","./isoFormat.js":"../node_modules/d3-time-format/src/isoFormat.js","./isoParse.js":"../node_modules/d3-time-format/src/isoParse.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/time.js":[function(require,module,exports) {
+},{"./defaultLocale.js":"csjH","./locale.js":"UbHU","./isoFormat.js":"PKKZ","./isoParse.js":"d4jk"}],"cbAV":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8283,7 +8244,7 @@ function calendar(year, month, week, day, hour, minute, second, millisecond, for
 function _default() {
   return calendar(_d3Time.timeYear, _d3Time.timeMonth, _d3Time.timeWeek, _d3Time.timeDay, _d3Time.timeHour, _d3Time.timeMinute, _d3Time.timeSecond, _d3Time.timeMillisecond, _d3TimeFormat.timeFormat).domain([new Date(2000, 0, 1), new Date(2000, 0, 2)]);
 }
-},{"d3-array":"../node_modules/d3-svg-legend/node_modules/d3-array/index.js","d3-interpolate":"../node_modules/d3-interpolate/src/index.js","d3-time":"../node_modules/d3-time/src/index.js","d3-time-format":"../node_modules/d3-time-format/src/index.js","./array":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/array.js","./continuous":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/continuous.js","./nice":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/nice.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/utcTime.js":[function(require,module,exports) {
+},{"d3-array":"ufYT","d3-interpolate":"k9aH","d3-time":"hQYG","d3-time-format":"UYpZ","./array":"rSHl","./continuous":"gEXa","./nice":"CBa7"}],"mvlE":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8300,7 +8261,7 @@ var _d3Time = require("d3-time");
 function _default() {
   return (0, _time.calendar)(_d3Time.utcYear, _d3Time.utcMonth, _d3Time.utcWeek, _d3Time.utcDay, _d3Time.utcHour, _d3Time.utcMinute, _d3Time.utcSecond, _d3Time.utcMillisecond, _d3TimeFormat.utcFormat).domain([Date.UTC(2000, 0, 1), Date.UTC(2000, 0, 2)]);
 }
-},{"./time":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/time.js","d3-time-format":"../node_modules/d3-time-format/src/index.js","d3-time":"../node_modules/d3-time/src/index.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/colors.js":[function(require,module,exports) {
+},{"./time":"cbAV","d3-time-format":"UYpZ","d3-time":"hQYG"}],"g1Tv":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8313,7 +8274,7 @@ function _default(s) {
     return "#" + x;
   });
 }
-},{}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/category10.js":[function(require,module,exports) {
+},{}],"Gido":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8328,7 +8289,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = (0, _colors.default)("1f77b4ff7f0e2ca02cd627289467bd8c564be377c27f7f7fbcbd2217becf");
 
 exports.default = _default;
-},{"./colors":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/colors.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/category20b.js":[function(require,module,exports) {
+},{"./colors":"g1Tv"}],"Zkvb":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8343,7 +8304,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = (0, _colors.default)("393b795254a36b6ecf9c9ede6379398ca252b5cf6bcedb9c8c6d31bd9e39e7ba52e7cb94843c39ad494ad6616be7969c7b4173a55194ce6dbdde9ed6");
 
 exports.default = _default;
-},{"./colors":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/colors.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/category20c.js":[function(require,module,exports) {
+},{"./colors":"g1Tv"}],"w3LD":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8358,7 +8319,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = (0, _colors.default)("3182bd6baed69ecae1c6dbefe6550dfd8d3cfdae6bfdd0a231a35474c476a1d99bc7e9c0756bb19e9ac8bcbddcdadaeb636363969696bdbdbdd9d9d9");
 
 exports.default = _default;
-},{"./colors":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/colors.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/category20.js":[function(require,module,exports) {
+},{"./colors":"g1Tv"}],"UM2z":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8373,7 +8334,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = (0, _colors.default)("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b0d58c564bc49c94e377c2f7b6d27f7f7fc7c7c7bcbd22dbdb8d17becf9edae5");
 
 exports.default = _default;
-},{"./colors":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/colors.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/cubehelix.js":[function(require,module,exports) {
+},{"./colors":"g1Tv"}],"rQxV":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8388,7 +8349,7 @@ var _d3Interpolate = require("d3-interpolate");
 var _default = (0, _d3Interpolate.interpolateCubehelixLong)((0, _d3Color.cubehelix)(300, 0.5, 0.0), (0, _d3Color.cubehelix)(-240, 0.5, 1.0));
 
 exports.default = _default;
-},{"d3-color":"../node_modules/d3-color/src/index.js","d3-interpolate":"../node_modules/d3-interpolate/src/index.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/rainbow.js":[function(require,module,exports) {
+},{"d3-color":"Peej","d3-interpolate":"k9aH"}],"FNFB":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8415,7 +8376,7 @@ function _default(t) {
   rainbow.l = 0.8 - 0.9 * ts;
   return rainbow + "";
 }
-},{"d3-color":"../node_modules/d3-color/src/index.js","d3-interpolate":"../node_modules/d3-interpolate/src/index.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/viridis.js":[function(require,module,exports) {
+},{"d3-color":"Peej","d3-interpolate":"k9aH"}],"dU4L":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8443,7 +8404,7 @@ var inferno = ramp((0, _colors.default)("00000401000501010601010802010a02020c020
 exports.inferno = inferno;
 var plasma = ramp((0, _colors.default)("0d088710078813078916078a19068c1b068d1d068e20068f2206902406912605912805922a05932c05942e05952f059631059733059735049837049938049a3a049a3c049b3e049c3f049c41049d43039e44039e46039f48039f4903a04b03a14c02a14e02a25002a25102a35302a35502a45601a45801a45901a55b01a55c01a65e01a66001a66100a76300a76400a76600a76700a86900a86a00a86c00a86e00a86f00a87100a87201a87401a87501a87701a87801a87a02a87b02a87d03a87e03a88004a88104a78305a78405a78606a68707a68808a68a09a58b0aa58d0ba58e0ca48f0da4910ea3920fa39410a29511a19613a19814a099159f9a169f9c179e9d189d9e199da01a9ca11b9ba21d9aa31e9aa51f99a62098a72197a82296aa2395ab2494ac2694ad2793ae2892b02991b12a90b22b8fb32c8eb42e8db52f8cb6308bb7318ab83289ba3388bb3488bc3587bd3786be3885bf3984c03a83c13b82c23c81c33d80c43e7fc5407ec6417dc7427cc8437bc9447aca457acb4679cc4778cc4977cd4a76ce4b75cf4c74d04d73d14e72d24f71d35171d45270d5536fd5546ed6556dd7566cd8576bd9586ada5a6ada5b69db5c68dc5d67dd5e66de5f65de6164df6263e06363e16462e26561e26660e3685fe4695ee56a5de56b5de66c5ce76e5be76f5ae87059e97158e97257ea7457eb7556eb7655ec7754ed7953ed7a52ee7b51ef7c51ef7e50f07f4ff0804ef1814df1834cf2844bf3854bf3874af48849f48948f58b47f58c46f68d45f68f44f79044f79143f79342f89441f89540f9973ff9983ef99a3efa9b3dfa9c3cfa9e3bfb9f3afba139fba238fca338fca537fca636fca835fca934fdab33fdac33fdae32fdaf31fdb130fdb22ffdb42ffdb52efeb72dfeb82cfeba2cfebb2bfebd2afebe2afec029fdc229fdc328fdc527fdc627fdc827fdca26fdcb26fccd25fcce25fcd025fcd225fbd324fbd524fbd724fad824fada24f9dc24f9dd25f8df25f8e125f7e225f7e425f6e626f6e826f5e926f5eb27f4ed27f3ee27f3f027f2f227f1f426f1f525f0f724f0f921"));
 exports.plasma = plasma;
-},{"./colors":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/colors.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/src/sequential.js":[function(require,module,exports) {
+},{"./colors":"g1Tv"}],"XO3V":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8481,7 +8442,7 @@ function sequential(interpolator) {
 
   return (0, _linear.linearish)(scale);
 }
-},{"./linear":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/linear.js"}],"../node_modules/d3-svg-legend/node_modules/d3-scale/index.js":[function(require,module,exports) {
+},{"./linear":"TWdB"}],"TX1S":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8693,7 +8654,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-},{"./src/band":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/band.js","./src/identity":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/identity.js","./src/linear":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/linear.js","./src/log":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/log.js","./src/ordinal":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/ordinal.js","./src/pow":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/pow.js","./src/quantile":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/quantile.js","./src/quantize":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/quantize.js","./src/threshold":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/threshold.js","./src/time":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/time.js","./src/utcTime":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/utcTime.js","./src/category10":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/category10.js","./src/category20b":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/category20b.js","./src/category20c":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/category20c.js","./src/category20":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/category20.js","./src/cubehelix":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/cubehelix.js","./src/rainbow":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/rainbow.js","./src/viridis":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/viridis.js","./src/sequential":"../node_modules/d3-svg-legend/node_modules/d3-scale/src/sequential.js"}],"../node_modules/d3-svg-legend/indexRollupNext.js":[function(require,module,exports) {
+},{"./src/band":"a34d","./src/identity":"NFOW","./src/linear":"TWdB","./src/log":"tDTM","./src/ordinal":"wtaT","./src/pow":"CKPq","./src/quantile":"frrW","./src/quantize":"YpW9","./src/threshold":"bC2j","./src/time":"cbAV","./src/utcTime":"mvlE","./src/category10":"Gido","./src/category20b":"Zkvb","./src/category20c":"w3LD","./src/category20":"UM2z","./src/cubehelix":"rQxV","./src/rainbow":"FNFB","./src/viridis":"dU4L","./src/sequential":"XO3V"}],"EIE9":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -9713,7 +9674,7 @@ var index = {
 };
 var _default = index;
 exports.default = _default;
-},{"d3-selection":"../node_modules/d3-svg-legend/node_modules/d3-selection/index.js","d3-format":"../node_modules/d3-svg-legend/node_modules/d3-format/index.js","d3-dispatch":"../node_modules/d3-svg-legend/node_modules/d3-dispatch/index.js","d3-scale":"../node_modules/d3-svg-legend/node_modules/d3-scale/index.js","d3-array":"../node_modules/d3-svg-legend/node_modules/d3-array/index.js"}],"index.js":[function(require,module,exports) {
+},{"d3-selection":"uj6R","d3-format":"IZVy","d3-dispatch":"uORS","d3-scale":"TX1S","d3-array":"ufYT"}],"Focm":[function(require,module,exports) {
 (function () {
   var csvFile = require("./CSV/Avg-Burke-Data.csv");
 
@@ -10073,209 +10034,5 @@ exports.default = _default;
     return document.querySelector(query);
   }
 })();
-},{"./CSV/Avg-Burke-Data.csv":"CSV/Avg-Burke-Data.csv","./SVG/ped.svg":"SVG/ped.svg","./SVG/bike.svg":"SVG/bike.svg","./SVG/ped-reverse.svg":"SVG/ped-reverse.svg","./SVG/bike-reverse.svg":"SVG/bike-reverse.svg","d3-svg-legend":"../node_modules/d3-svg-legend/indexRollupNext.js"}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
-var global = arguments[3];
-var OVERLAY_ID = '__parcel__error__overlay__';
-var OldModule = module.bundle.Module;
-
-function Module(moduleName) {
-  OldModule.call(this, moduleName);
-  this.hot = {
-    data: module.bundle.hotData,
-    _acceptCallbacks: [],
-    _disposeCallbacks: [],
-    accept: function (fn) {
-      this._acceptCallbacks.push(fn || function () {});
-    },
-    dispose: function (fn) {
-      this._disposeCallbacks.push(fn);
-    }
-  };
-  module.bundle.hotData = null;
-}
-
-module.bundle.Module = Module;
-var checkedAssets, assetsToAccept;
-var parent = module.bundle.parent;
-
-if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
-  var hostname = "" || location.hostname;
-  var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50493" + '/');
-
-  ws.onmessage = function (event) {
-    checkedAssets = {};
-    assetsToAccept = [];
-    var data = JSON.parse(event.data);
-
-    if (data.type === 'update') {
-      var handled = false;
-      data.assets.forEach(function (asset) {
-        if (!asset.isNew) {
-          var didAccept = hmrAcceptCheck(global.parcelRequire, asset.id);
-
-          if (didAccept) {
-            handled = true;
-          }
-        }
-      }); // Enable HMR for CSS by default.
-
-      handled = handled || data.assets.every(function (asset) {
-        return asset.type === 'css' && asset.generated.js;
-      });
-
-      if (handled) {
-        console.clear();
-        data.assets.forEach(function (asset) {
-          hmrApply(global.parcelRequire, asset);
-        });
-        assetsToAccept.forEach(function (v) {
-          hmrAcceptRun(v[0], v[1]);
-        });
-      } else if (location.reload) {
-        // `location` global exists in a web worker context but lacks `.reload()` function.
-        location.reload();
-      }
-    }
-
-    if (data.type === 'reload') {
-      ws.close();
-
-      ws.onclose = function () {
-        location.reload();
-      };
-    }
-
-    if (data.type === 'error-resolved') {
-      console.log('[parcel] ✨ Error resolved');
-      removeErrorOverlay();
-    }
-
-    if (data.type === 'error') {
-      console.error('[parcel] 🚨  ' + data.error.message + '\n' + data.error.stack);
-      removeErrorOverlay();
-      var overlay = createErrorOverlay(data);
-      document.body.appendChild(overlay);
-    }
-  };
-}
-
-function removeErrorOverlay() {
-  var overlay = document.getElementById(OVERLAY_ID);
-
-  if (overlay) {
-    overlay.remove();
-  }
-}
-
-function createErrorOverlay(data) {
-  var overlay = document.createElement('div');
-  overlay.id = OVERLAY_ID; // html encode message and stack trace
-
-  var message = document.createElement('div');
-  var stackTrace = document.createElement('pre');
-  message.innerText = data.error.message;
-  stackTrace.innerText = data.error.stack;
-  overlay.innerHTML = '<div style="background: black; font-size: 16px; color: white; position: fixed; height: 100%; width: 100%; top: 0px; left: 0px; padding: 30px; opacity: 0.85; font-family: Menlo, Consolas, monospace; z-index: 9999;">' + '<span style="background: red; padding: 2px 4px; border-radius: 2px;">ERROR</span>' + '<span style="top: 2px; margin-left: 5px; position: relative;">🚨</span>' + '<div style="font-size: 18px; font-weight: bold; margin-top: 20px;">' + message.innerHTML + '</div>' + '<pre>' + stackTrace.innerHTML + '</pre>' + '</div>';
-  return overlay;
-}
-
-function getParents(bundle, id) {
-  var modules = bundle.modules;
-
-  if (!modules) {
-    return [];
-  }
-
-  var parents = [];
-  var k, d, dep;
-
-  for (k in modules) {
-    for (d in modules[k][1]) {
-      dep = modules[k][1][d];
-
-      if (dep === id || Array.isArray(dep) && dep[dep.length - 1] === id) {
-        parents.push(k);
-      }
-    }
-  }
-
-  if (bundle.parent) {
-    parents = parents.concat(getParents(bundle.parent, id));
-  }
-
-  return parents;
-}
-
-function hmrApply(bundle, asset) {
-  var modules = bundle.modules;
-
-  if (!modules) {
-    return;
-  }
-
-  if (modules[asset.id] || !bundle.parent) {
-    var fn = new Function('require', 'module', 'exports', asset.generated.js);
-    asset.isNew = !modules[asset.id];
-    modules[asset.id] = [fn, asset.deps];
-  } else if (bundle.parent) {
-    hmrApply(bundle.parent, asset);
-  }
-}
-
-function hmrAcceptCheck(bundle, id) {
-  var modules = bundle.modules;
-
-  if (!modules) {
-    return;
-  }
-
-  if (!modules[id] && bundle.parent) {
-    return hmrAcceptCheck(bundle.parent, id);
-  }
-
-  if (checkedAssets[id]) {
-    return;
-  }
-
-  checkedAssets[id] = true;
-  var cached = bundle.cache[id];
-  assetsToAccept.push([bundle, id]);
-
-  if (cached && cached.hot && cached.hot._acceptCallbacks.length) {
-    return true;
-  }
-
-  return getParents(global.parcelRequire, id).some(function (id) {
-    return hmrAcceptCheck(global.parcelRequire, id);
-  });
-}
-
-function hmrAcceptRun(bundle, id) {
-  var cached = bundle.cache[id];
-  bundle.hotData = {};
-
-  if (cached) {
-    cached.hot.data = bundle.hotData;
-  }
-
-  if (cached && cached.hot && cached.hot._disposeCallbacks.length) {
-    cached.hot._disposeCallbacks.forEach(function (cb) {
-      cb(bundle.hotData);
-    });
-  }
-
-  delete bundle.cache[id];
-  bundle(id);
-  cached = bundle.cache[id];
-
-  if (cached && cached.hot && cached.hot._acceptCallbacks.length) {
-    cached.hot._acceptCallbacks.forEach(function (cb) {
-      cb();
-    });
-
-    return true;
-  }
-}
-},{}]},{},["../node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{"./CSV/Avg-Burke-Data.csv":"BclC","./SVG/ped.svg":"USbb","./SVG/bike.svg":"mg0Q","./SVG/ped-reverse.svg":"CEQB","./SVG/bike-reverse.svg":"xOPX","d3-svg-legend":"EIE9"}]},{},["Focm"], null)
+//# sourceMappingURL=https://uw-cse442-wi20.github.io/A3-seattle-transportation/src.6f88882f.js.map
