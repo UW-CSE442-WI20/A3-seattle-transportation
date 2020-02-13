@@ -254,8 +254,8 @@
 		let yAxis = d3.axisLeft()
 		    .scale(y);
 		let color = d3.scaleOrdinal()
-			.domain(["ped_south_avg", "bike_south_avg", "bike_north_avg", "ped_north_avg"])
-	    	.range(["#93B4D8", "#416B99" , "#F49537", "#C17937"]);
+			.domain(["ped_south_avg", "bike_south_avg", "ped_north_avg", "bike_north_avg"])
+	    	.range(["#93B4D8",  "#A35A26", "#416B99", "#F49537"]);
 	    let line = d3.line()
 	      		.x(function(d) {
 	        		return x(d.time_of_day);
