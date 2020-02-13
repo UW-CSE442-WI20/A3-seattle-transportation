@@ -9739,7 +9739,6 @@ exports.default = _default;
   window.addEventListener("load", init);
 
   function init() {
-    // TODO REMOVE THIS BEFORE PUSHING!!!!!
     animatePath();
     sizeElements();
     setupSlider();
@@ -9883,7 +9882,7 @@ exports.default = _default;
     d3.select("*").interrupt();
     d3.xml(typeOfIcon).then(function (data) {
       d3.select(insertDiv).node().append(data.documentElement);
-      startTransition(numIcons, time, insertDiv, translation, endTranslation, typeOfIcon);
+      startTransition(time, insertDiv, translation, endTranslation, typeOfIcon);
     });
     var x = 0; // Keep making icons until we've reached the necessary amount,
     // staggering by 1 seconds
@@ -9894,7 +9893,7 @@ exports.default = _default;
       if (x < numIcons - 1 && currentTime == time) {
         d3.xml(typeOfIcon).then(function (data) {
           d3.select(insertDiv).node().append(data.documentElement);
-          startTransition(numIcons, time, insertDiv, translation, endTranslation, typeOfIcon);
+          startTransition(time, insertDiv, translation, endTranslation, typeOfIcon);
         });
       } else {
         numIcons = 0;
@@ -9902,13 +9901,13 @@ exports.default = _default;
       }
 
       x++;
-    }, 10000 / numIcons);
+    }, 1000);
   }
 
-  function startTransition(numIcons, selectedTime, insertDiv, translation, endTranslation, typeOfIcon) {
+  function startTransition(selectedTime, insertDiv, translation, endTranslation, typeOfIcon) {
     d3.selectAll(insertDiv + " svg").filter(function () {
       return !this.classList.contains('transitioning');
-    }).attr("fill", "#779FD3").transition().attr("transform", translation).attr("class", "transitioning").duration(50000 / numIcons).ease(d3.easeLinear).on('end', function () {
+    }).transition().attr("transform", translation).attr("class", "transitioning").duration(5000).ease(d3.easeLinear).on('end', function () {
       if (currentTime == selectedTime) {
         updateCounts(typeOfIcon);
       }
@@ -9961,13 +9960,13 @@ exports.default = _default;
     var time = d3.scaleTime().domain([minDate, maxDate]).range([0, width]);
     var xAxis = d3.axisTop(time).ticks(23);
     var yAxis = d3.axisLeft().scale(y);
-    var color = d3.scaleOrdinal().domain(["Avg. Northbound Pedestrians", "Avg. Northbound Cyclists", "Avg. Southbound Pedestrians", "Avg. Southbound Cyclists"]).range(["#779FD3", "#416B99", "#F49537", "#AE6B29"]);
+    var color = d3.scaleOrdinal(d3.schemeCategory10);
     var line = d3.line().x(function (d) {
       return x(d.time_of_day);
     }).y(function (d) {
       return y(d.number);
     });
-    var legend = d3Legend.legendColor().scale(color).shape("circle").labels(["Avg. Northbound Pedestrians", "Avg. Northbound Cyclists", "Avg. Southbound Pedestrians", "Avg. Southbound Cyclists"]); // A lot of this is from 
+    var legend = d3Legend.legendColor().scale(color).shape("circle").labels(["Avg. Northbound Pedestrians", "Avg. Southbound Pedestrians", "Avg. Northbound Cyclists", "Avg. Southbound Cyclists"]); // A lot of this is from 
     // http://bl.ocks.org/mgold/6a32cec6380b6ce75c1e
 
     d3.csv(csvFile).then(function (data) {
@@ -10102,7 +10101,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55983" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51584" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
