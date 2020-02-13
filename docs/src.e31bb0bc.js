@@ -9739,8 +9739,7 @@ exports.default = _default;
   window.addEventListener("load", init);
 
   function init() {
-    // TODO REMOVE THIS BEFORE PUSHING!!!!!!
-    id("content").classList.add("fade-in");
+    // TODO REMOVE THIS BEFORE PUSHING!!!!!
     animatePath();
     sizeElements();
     setupSlider();
@@ -9884,7 +9883,7 @@ exports.default = _default;
     d3.select("*").interrupt();
     d3.xml(typeOfIcon).then(function (data) {
       d3.select(insertDiv).node().append(data.documentElement);
-      startTransition(time, insertDiv, translation, endTranslation, typeOfIcon);
+      startTransition(numIcons, time, insertDiv, translation, endTranslation, typeOfIcon);
     });
     var x = 0; // Keep making icons until we've reached the necessary amount,
     // staggering by 1 seconds
@@ -9895,7 +9894,7 @@ exports.default = _default;
       if (x < numIcons - 1 && currentTime == time) {
         d3.xml(typeOfIcon).then(function (data) {
           d3.select(insertDiv).node().append(data.documentElement);
-          startTransition(time, insertDiv, translation, endTranslation, typeOfIcon);
+          startTransition(numIcons, time, insertDiv, translation, endTranslation, typeOfIcon);
         });
       } else {
         numIcons = 0;
@@ -9903,13 +9902,13 @@ exports.default = _default;
       }
 
       x++;
-    }, 1000);
+    }, 10000 / numIcons);
   }
 
-  function startTransition(selectedTime, insertDiv, translation, endTranslation, typeOfIcon) {
+  function startTransition(numIcons, selectedTime, insertDiv, translation, endTranslation, typeOfIcon) {
     d3.selectAll(insertDiv + " svg").filter(function () {
       return !this.classList.contains('transitioning');
-    }).attr("fill", "#779FD3").transition().attr("transform", translation).attr("class", "transitioning").duration(5000).ease(d3.easeLinear).on('end', function () {
+    }).attr("fill", "#779FD3").transition().attr("transform", translation).attr("class", "transitioning").duration(50000 / numIcons).ease(d3.easeLinear).on('end', function () {
       if (currentTime == selectedTime) {
         updateCounts(typeOfIcon);
       }
@@ -10103,7 +10102,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63544" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55983" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
